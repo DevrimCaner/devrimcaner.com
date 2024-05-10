@@ -1,5 +1,5 @@
 # devrimcaner.com
-Personel Web Site
+This is a personel web site for me
 
 http://devrimcaner.com
 
