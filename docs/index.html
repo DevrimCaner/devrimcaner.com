@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Under Construction.</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2f3640;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            color: #44bd32;
+            transform: translateY(-20%);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .dots {
+            display: inline-block;
+            width: 1em;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Site is Under Construction<span class="dots">...</span></h1>
+    </div>
+    <script>
+        let dotContainer = document.querySelector('.dots');
+        let dots = 0;
+        setInterval(() => {
+            dots = (dots + 1) % 4; // 0, 1, 2, 3
+            dotContainer.textContent = '.'.repeat(dots);
+        }, 500);
+    </script>
+</body>
+</html>
