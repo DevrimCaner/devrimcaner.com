@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
       }}
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
           <Link href="/" passHref legacyBehavior>
             <a style={{ color: 'white', textDecoration: 'none' }}>Logo</a>
           </Link>

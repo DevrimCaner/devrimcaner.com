@@ -9,8 +9,28 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <CssBaseline />
       <Navbar />
+      <Component {...pageProps} />
       <Container>
-        <Component {...pageProps} />
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
       </Container>
     </>
   );
