@@ -3,12 +3,12 @@ import { Container, Typography, Button } from '@mui/material';
 import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-const ProjectsPage = () => {
+const HomePage = () => {
     return (
         <>
             <NavBar />
             <Container>
-                <h1>Test</h1>
+                <h1>Home</h1>
 
             </Container>
             <Footer />
@@ -16,4 +16,4 @@ const ProjectsPage = () => {
     );
 }
 
-export default ProjectsPage;
+export default HomePage;
