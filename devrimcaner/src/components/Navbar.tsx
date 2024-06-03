@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
     <AppBar
       position="sticky"
       sx={{
-        background: 'rgba(0, 0, 0, 0.7)',
+        background: 'rgba(0, 0, 0, 0.75)',
         backdropFilter: 'blur(10px)',
         boxShadow: 'none',
       }}

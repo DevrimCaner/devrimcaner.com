@@ -2,37 +2,17 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import Navbar from '../components/Navbar';
 //import '../styles/globals.css';
-import { CssBaseline, Container } from '@mui/material';
+import { CssBaseline, Container, Box } from '@mui/material';
+import Footer from '@/components/Footer';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <>
+    <Box>    
       <CssBaseline />
       <Navbar />
       <Component {...pageProps} />
-      <Container>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-      </Container>
-    </>
+      <Footer />
+    </Box>
   );
 }
 

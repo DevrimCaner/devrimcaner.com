@@ -1,11 +1,14 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import styles from '../styles/Home.module.css';
-import HeroSection from '@/components/HeroSection';
+import Hero from '@/components/Hero';
+import Heading from '@/components/Heading';
 const Home: React.FC = () => {
   return (
     <Box>
-      <HeroSection />
+      <Hero />
+      <Heading />
+      
     </Box>
   );
 }

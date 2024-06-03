@@ -11,6 +11,8 @@ const Blog: React.FC = () => {
       <Typography variant="body1" paragraph>
         This page is under construction.
       </Typography>
+      <img src="https://placehold.co/1920x1080" style={{maxWidth:'100%'}} alt="placeholder" />
+
     </Container>
   );
 }

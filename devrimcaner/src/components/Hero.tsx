@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import styles from '../styles/Home.module.css';
 
-const HeroSection: React.FC = () => {
+const Hero: React.FC = () => {
   return (
     <Box>
       <div className={styles.heroImage}>
@@ -20,4 +20,4 @@ const HeroSection: React.FC = () => {
   );
 }
 
-export default HeroSection;
+export default Hero;
