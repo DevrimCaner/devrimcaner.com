@@ -5,7 +5,7 @@ interface ProjectCardProps {
   image: string;
   title: string;
   date: string;
-  categories: object;
+  categories: string[];
   description: string;
 }
 
@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, date, categorie
               {date}
             </Typography>
             <Box my={1}>
-              {categories.map((category, index) => (
+              {categories.map((category) => (
                 <Chip label={category} color="primary" style={{backgroundColor:"#555"}}/>
             ))}
             </Box>
