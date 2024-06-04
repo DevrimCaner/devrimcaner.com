@@ -6,5 +6,6 @@ interface BlogPost {
     content?: string;
     'content:encoded'?: string;
     'dc:creator'?: string;
+    category: string[];
 }
   
