@@ -46,12 +46,15 @@ const Navbar: React.FC = () => {
           boxShadow: 'none',
         }}
       >
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between'}}>
+          
+          <Box sx={{ display: 'flex', maxHeight: '55px'}} >
             <Link href="/" passHref legacyBehavior>
-              <a style={{ color: 'white', textDecoration: 'none' }}>Logo</a>
+              <a style={{ color: 'white', textDecoration: 'none' }}>
+              <img src="https://placehold.co/180x55?text=LOGO" style={{height: '100%'}} alt="Home" />
+              </a>
             </Link>
-          </Typography>
+          </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Link key={page.name} href={page.path} passHref legacyBehavior>
