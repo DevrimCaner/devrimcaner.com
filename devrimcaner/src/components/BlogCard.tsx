@@ -17,14 +17,14 @@ const BlogCard: React.FC<BlogPost> = ( post:BlogPost) => {
   const getImage = () =>{
     let defaultImage = 'https://placehold.co/600x400?text=' + post.title.replace(/<[^>]+>/g, '').replace('&', '');
     let textContent = '';
-    if(post['content:encoded']) textContent = post['content:encoded'];
-    if(post.content) textContent = post.content;
-    if(post.description) textContent = post.description;
+    if (post['content:encoded']) textContent = post['content:encoded'];
+    if (post.content) textContent = post.content;
+    if (post.description) textContent = post.description;
 
     const parser = new DOMParser();
-    const doc = parser.parseFromString(textContent.substring(0,textContent.length/2), 'text/html');
+    const doc = parser.parseFromString(textContent.substring(0, textContent.length / 2), 'text/html');
     const img = doc.querySelector('img');
-    return img ? img.getAttribute('src') : defaultImage;
+    return img ? img.getAttribute('src') || defaultImage : defaultImage;
   }
   
   return (
