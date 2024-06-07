@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { AppBar, Toolbar, Typography, Button, Box, Drawer, IconButton, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, Button, Box, Drawer, IconButton, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import styles from '../styles/Navbar.module.css';
 
 const pages = [{ name: 'Home', path: '/' }, { name: 'Projects', path: '/projects' }, { name: 'Blog', path: '/blog' }];
 
@@ -15,47 +16,18 @@ const Navbar: React.FC = () => {
     setDrawerOpen(open);
   };
 
-  const list = () => (
-    <Box
-      sx={{
-        width: 250
-       }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      <List >
-        {pages.map((page) => (
-          <ListItem button key={page.name}>
-            <Link href={page.path} passHref legacyBehavior>
-              <ListItemText primary={page.name} />
-            </Link>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
   return (
     <>
-      <AppBar
-        position="sticky"
-        sx={{
-          background: 'rgba(0, 0, 0, 0.6)',
-          backdropFilter: 'blur(10px)',
-          boxShadow: 'none',
-        }}
-      >
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between'}}>
-          
-          <Box sx={{ display: 'flex', maxHeight: '55px'}} >
+      <AppBar position="sticky" className={styles.navbar}>
+        <Toolbar className={styles.toolbar}>
+          <Box className={styles.logoContainer}>
             <Link href="/" passHref legacyBehavior>
-              <a style={{ color: 'white', textDecoration: 'none' }}>
-              <img src="https://placehold.co/180x55?text=LOGO" style={{height: '100%'}} alt="Home" />
+              <a className={styles.logoLink}>
+                <img src="https://XXplacehold.co/180x55?text=LOGO" className={styles.logoImage} alt="Home" />
               </a>
             </Link>
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }} className={styles.navLinks}>
             {pages.map((page) => (
               <Link key={page.name} href={page.path} passHref legacyBehavior>
                 <Button sx={{ color: 'white' }}>
@@ -65,33 +37,38 @@ const Navbar: React.FC = () => {
             ))}
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              onClick={toggleDrawer(true)}
-            >
+            <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
           </Box>
         </Toolbar>
       </AppBar>
       <Drawer
-        style={{
-        background: 'rgba(0, 0, 0, 0.1)',
-        backdropFilter: 'blur(5px)',
-        boxShadow: 'none',
-       }}
         anchor="left"
         open={drawerOpen}
         onClose={toggleDrawer(false)}
         PaperProps={{
-          sx: {
-            backgroundColor: '#ecf0f1'
-          },
+          className: styles.drawerPaper,
         }}
       >
-        {list()}
+        <Box
+      sx={{
+        width: 250
+       }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <List>
+        {pages.map((page) => (
+          <ListItem button key={page.name}>
+            <Link href={page.path} passHref legacyBehavior>
+              <ListItemText primary={page.name} />
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
       </Drawer>
     </>
   );
