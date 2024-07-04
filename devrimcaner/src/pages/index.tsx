@@ -4,12 +4,11 @@ import styles from '../styles/Home.module.css';
 import Hero from '@/components/Hero';
 import Heading from '@/components/Heading';
 import Socials from '@/components/Socials';
+import Landing from '@/components/Landing';
 const Home: React.FC = () => {
   return (
     <Box>
-      <Hero />
-      <Heading />
-      <Socials />
+      <Landing />
     </Box>
   );
 }

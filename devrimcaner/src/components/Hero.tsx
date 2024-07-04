@@ -10,7 +10,10 @@ const Hero: React.FC = () => {
           <Container>
             <Box sx={{ textAlign: 'center', height: '100%' }}>
               <Typography variant="h2" component="h1" className={styles.title}>
-                Welcome to My Next.js App
+                Devrim Caner ÖKDEM
+              </Typography>
+              <Typography variant="h3" component="h2" className={styles.description}>
+                Programmer
               </Typography>
             </Box>
           </Container>

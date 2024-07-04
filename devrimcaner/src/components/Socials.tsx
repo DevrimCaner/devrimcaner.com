@@ -53,7 +53,6 @@ const socials = [
 const Socials: React.FC = () => {
   return (
     <Container style={{marginTop: '50px', marginBottom: '50px'}}>
-        <Typography variant="h3" align="center">Socials</Typography>
         <Grid container spacing={2} style={{marginTop: '30px'}}>
             {socials.map((social, index) => (
                 <Grid item xs={12} sm={6} md={4} xl={3}>
