@@ -21,7 +21,7 @@ const Profile: React.FC = () => {
         />
       </Typography>
       <Typography variant="h3" component="h1">
-        Devrim Caner ÖKDEM
+        Devrim ÖKDEM
       </Typography>
       <Typography variant="h4" component="h2">
         Programmer

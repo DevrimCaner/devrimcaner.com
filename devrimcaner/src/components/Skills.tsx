@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Card, CardContent, Typography, Box, Rating } from '@mui/material';
-import { SiJavascript, SiPhp, SiMysql, SiPython, SiLinux, SiUnity, SiCsharp, SiGit } from "react-icons/si";
+import { SiJavascript, SiPhp, SiMysql, SiPython, SiLinux, SiUnity, SiCsharp, SiGit, SiHtml5, SiCss3 } from "react-icons/si";
 
 const skills = [
   {
@@ -42,6 +42,16 @@ const skills = [
     icon: <SiGit />,
     title: 'Git',
     rating: 4.5
+  },
+  {
+    icon: <SiHtml5 />,
+    title: 'HTML',
+    rating: 4.5
+  },
+  {
+    icon: <SiCss3 />,
+    title: 'CSS',
+    rating: 3.5
   },
 ];
 
