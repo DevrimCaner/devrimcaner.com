@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
 import { styled } from '@mui/system';
+import Navigation from '@/components/Navigation';
 
 const StickyBox = styled(Box)(({ theme }) => ({
   position: 'sticky',
@@ -29,6 +30,13 @@ const Profile: React.FC = () => {
       <Typography variant="body1" component="p">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Typography>
+      
+      <Navigation />
+
+      {/*
+      Filters and Socials gonna Add
+      */}
+
     </StickyBox>
   );
 }

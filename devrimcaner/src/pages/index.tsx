@@ -4,7 +4,23 @@ import Profile from '@/components/Profile';
 import About from '@/components/About';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
-import Skills from '@/components/Skills';
+
+const experiences = [
+  {
+    title: 'Software Engineer',
+    company: 'Tech Corp',
+    date: '2023-present',
+    description: 'Worked on developing scalable web applications.',
+    technologies: ['JavaScript', 'React', 'Node.js'],
+  },
+  {
+    title: 'Frontend Developer',
+    company: 'Design Studio',
+    date: '2021-2023',
+    description: 'Focused on creating beautiful and functional UI components.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Vue.js'],
+  },
+];
 
 const Home: React.FC = () => {
   return (
@@ -15,7 +31,7 @@ const Home: React.FC = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <About />
-          <Experience />
+          <Experience experiences={experiences}/>
           <Projects />
         </Grid>
       </Grid>
