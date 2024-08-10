@@ -18,7 +18,7 @@ const experiences = [
     company: 'Design Studio',
     date: '2021-2023',
     description: 'Focused on creating beautiful and functional UI components.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Vue.js'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'C#',],
   },
 ];
 
