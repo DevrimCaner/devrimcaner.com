@@ -21,18 +21,41 @@ const experiences = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'C#',],
   },
 ];
+const projects = [
+  {
+    title: 'Portfolio Website',
+    madeAt: 'Personal Project',
+    date: '2024',
+    description: 'A personal portfolio website to showcase my projects and skills.',
+    technologies: ['React', 'TypeScript', 'Material-UI'],
+    links: [
+      { label: 'Live Demo', url: 'https://example.com' },
+      { label: 'GitHub Repo', url: 'https://github.com/example' },
+    ],
+  },
+  {
+    title: 'E-commerce Platform',
+    madeAt: 'Tech Corp',
+    date: '2023',
+    description: 'Developed a full-featured e-commerce platform.',
+    technologies: ['Node.js', 'Express', 'MongoDB'],
+    links: [
+      { label: 'GitHub Repo', url: 'https://github.com/example-ecommerce' },
+    ],
+  },
+];
 
 const Home: React.FC = () => {
   return (
     <Container sx={{ marginTop: 11.25 }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <Profile />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={7}>
           <About />
           <Experience experiences={experiences}/>
-          <Projects />
+          <Projects projects={projects}/>
         </Grid>
       </Grid>
     </Container>
