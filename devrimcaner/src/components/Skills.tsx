@@ -64,7 +64,7 @@ const Skills: React.FC = () => {
     <Grid container spacing={2}>
       {skills.map((skill, index) => (
         <Grid item xs={12} md={2} key={index}>
-            <Box align="center" sx={{ fontSize: 30}}>{skill.icon}</Box>
+            <Box sx={{ fontSize: 30, textAlign: 'center'}}>{skill.icon}</Box>
               <Typography variant="h6" component="h4" align="center" sx={{ marginTop: 0, fontSize: 16 }}>
                 {skill.title}
               </Typography>

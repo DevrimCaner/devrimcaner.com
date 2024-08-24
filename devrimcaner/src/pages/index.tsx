@@ -47,7 +47,7 @@ const projects = [
 
 const Home: React.FC = () => {
   return (
-    <Container sx={{ marginTop: 11.25 }}>
+    <Container>
       <Grid container spacing={2}>
         <Grid item xs={12} md={5}>
           <Profile />
