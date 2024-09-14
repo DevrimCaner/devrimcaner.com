@@ -35,10 +35,6 @@ const Profile: React.FC = () => {
       
       <Navigation />
 
-      {/*
-      Filters and Socials gonna Add
-      */}
-
     </StickyBox>
   );
 }

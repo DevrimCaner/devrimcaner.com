@@ -6,7 +6,7 @@ const About: React.FC = () => {
   return (
     <section id="about">
 
-      <Typography variant="h4" component="h2" sx={{ marginTop: 10 }}>
+      <Typography variant="h4" component="h2">
         About
       </Typography>
       <Typography variant="body1" component="p">
