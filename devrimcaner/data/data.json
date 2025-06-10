@@ -1,0 +1,32 @@
+{
+  "about": {
+    "name": "Jane Doe",
+    "bio": "I'm a web developer passionate about design and performance."
+  },
+  "projects": [
+    {
+      "name": "Portfolio Website",
+      "description": "A sleek personal website built with Next.js and MUI.",
+      "link": "https://example.com"
+    },
+    {
+      "name": "Markdown Blog",
+      "description": "A statically generated blog using markdown files.",
+      "link": "https://github.com/janedoe/blog"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Tech Corp",
+      "role": "Frontend Developer",
+      "period": "Jan 2022 - Present",
+      "description": "Developed and maintained scalable UI components using React."
+    },
+    {
+      "company": "Design Studio",
+      "role": "UI Designer",
+      "period": "2020 - 2022",
+      "description": "Designed modern interfaces with a focus on user experience."
+    }
+  ]
+}
