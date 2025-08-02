@@ -1,4 +1,5 @@
-import { Box, Typography, Link, Stack, Divider } from '@mui/joy';
+import Image from 'next/image';
+import { Box, Typography, Link, Stack } from '@mui/joy';
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 
 type Social = {
@@ -32,18 +33,41 @@ const Navigation = ({ data }: Props) => (
       height: { md: 'calc(100vh - 120px)', xs: 'auto' }, // constrain to viewport on md+
     }}
   >
-    {/* Top part: name/title/bio */}
-    <Box>
-      <Typography level="h3" sx={{ mb: 0.5 }}>
-        {data.name}
-      </Typography>
-      <Typography level="body-sm" sx={{ mb: 1, color: 'text.secondary' }}>
-        {data.title}
-      </Typography>
-      <Typography level="body-md">{data.bio}</Typography>
+    <Box sx={{ }}>
+    <Box
+      sx={{
+        width: 240,
+        height: 240,
+        mb: 2,
+        position: 'relative',
+        overflow: 'hidden',
+        border: '2px solid',
+        borderRadius: '50%',
+        //mx: 'auto',
+        //borderColor: 'primary.solidBg',
+        //boxShadow: '0 0 20px rgba(57,255,20,0.5)', // subtle neon glow
+      }}
+    >
+      <Image
+        src="/profile.png"
+        alt={`${data.name} profile`}
+        fill
+        sizes="120px"
+        style={{ objectFit: 'cover' }}
+        priority
+      />
     </Box>
 
-    {/* Navigation links */}
+    <Typography level="h3" sx={{ mb: 0.5 }}>
+      {data.name}
+    </Typography>
+    <Typography level="body-sm" sx={{ mb: 1, color: 'text.secondary' }}>
+      {data.title}
+    </Typography>
+    <Typography level="body-md">{data.bio}</Typography>
+  </Box>
+    
+
     <Box>
       <Stack spacing={1}>
         <Link href="#about" underline="none">
@@ -59,7 +83,6 @@ const Navigation = ({ data }: Props) => (
     </Box>
 
     <Box sx={{ mt: { md: 'auto', xs: 0 } }}>
-      <Divider sx={{ mb: 1 }} />
       <Stack direction="row" spacing={1}>
         {data.Social.linkedin && (
           <Link href={data.Social.linkedin} target="_blank" aria-label="LinkedIn">
