@@ -1,14 +1,17 @@
 import { Box, Typography } from '@mui/joy';
 
 type Props = {
-  name: string;
-  bio: string;
+  content: string;
 };
 
-const About = ({ name, bio }: Props) => (
-  <Box sx={{ mb: 6 }}>
-    <Typography level="h2">{name}</Typography>
-    <Typography level="body-lg" sx={{ mt: 1 }}>{bio}</Typography>
+const About = ({ content }: Props) => (
+  <Box id="about" sx={{ mb: 8 }}>
+    <Typography level="h2" sx={{ mb: 1 }}>
+      About
+    </Typography>
+    <Typography level="body-lg" sx={{ whiteSpace: 'pre-line' }}>
+      {content}
+    </Typography>
   </Box>
 );
 

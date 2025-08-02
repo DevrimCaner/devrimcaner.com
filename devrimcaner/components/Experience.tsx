@@ -12,14 +12,18 @@ type Props = {
 };
 
 const Experience = ({ experience }: Props) => (
-  <Box sx={{ mb: 6 }}>
-    <Typography level="h2">Experience</Typography>
+  <Box id="experience" sx={{ mb: 8 }}>
+    <Typography level="h2" sx={{ mb: 2 }}>
+      Experience
+    </Typography>
     {experience.map((job) => (
-      <Card key={job.company} sx={{ mt: 2 }}>
+      <Card key={job.company} variant="outlined" sx={{ mt: 2, p: 3 }}>
         <Typography level="title-md">
           {job.role} @ {job.company}
         </Typography>
-        <Typography level="body-xs" sx={{ mb: 1 }}>{job.period}</Typography>
+        <Typography level="body-xs" sx={{ mb: 1 }}>
+          {job.period}
+        </Typography>
         <Typography level="body-sm">{job.description}</Typography>
       </Card>
     ))}

@@ -1,18 +1,47 @@
 {
-  "about": {
+  "navigation": {
     "name": "Jane Doe",
-    "bio": "I'm a web developer passionate about design and performance."
+    "title": "DevOps Engineer",
+    "bio": "Short description about me sadgasd asdgsadg sadgss gasdgasg sagsagas 💻.",
+    "Social": {
+        "linkedin": "https://www.linkedin.com/",
+        "Github": "https://www.github..com/"
+    }
   },
+  "about": "I am a DevOps Engineer with a strong focus on automating workflows, optimizing cloud infrastructure, and enhancing development pipelines. With experience in tools such as Docker, Kubernetes, Jenkins, and Terraform, I specialize in creating reliable CI/CD processes that speed up delivery and improve system stability. I enjoy bridging the gap between development and operations by fostering a culture of collaboration, continuous improvement, and proactive monitoring. My background spans cloud platforms like AWS and Azure, infrastructure as code, and container orchestration, enabling me to design and maintain highly available, secure, and scalable systems. I am passionate about solving complex problems, reducing manual overhead through automation, and ensuring that applications run efficiently from development to production.",
   "projects": [
     {
       "name": "Portfolio Website",
       "description": "A sleek personal website built with Next.js and MUI.",
-      "link": "https://example.com"
+      "link": "https://example.com",
+      "period": {
+        "start": "2022-12",
+        "end": "2023-02",
+        "display": "Dec 2022 - Feb 2023"
+      },
+      "techs": ["HTML & CSS", "Javascript", "PHP"]
     },
     {
       "name": "Markdown Blog",
       "description": "A statically generated blog using markdown files.",
-      "link": "https://github.com/janedoe/blog"
+      "link": "https://github.com/janedoe/blog",
+      "period": {
+        "start": "2022-09",
+        "end": "2022-11",
+        "display": "Sep - Nov 2022"
+      },
+      "techs": ["HTML & CSS", "Javascript", "Python"]
+    },
+    {
+      "name": "Markdown Blog 2",
+      "description": "A statically generated blog using markdown files.",
+      "link": "https://github.com/janedoe/blog",
+      "period": {
+        "start": "2022-09",
+        "end": "2022-11",
+        "display": "Sep - Nov 2022"
+      },
+      "techs": ["HTML & CSS", "Javascript", "Python"]
     }
   ],
   "experience": [
@@ -28,5 +57,5 @@
       "period": "2020 - 2022",
       "description": "Designed modern interfaces with a focus on user experience."
     }
-  ]
+  ]  
 }
