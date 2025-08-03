@@ -36,16 +36,16 @@ const Navigation = ({ data }: Props) => (
     <Box sx={{ }}>
     <Box
       sx={{
-        width: 240,
-        height: 240,
+        width: 200,
+        height: 200,
         mb: 2,
         position: 'relative',
         overflow: 'hidden',
         border: '2px solid',
         borderRadius: '50%',
-        //mx: 'auto',
         //borderColor: 'primary.solidBg',
-        //boxShadow: '0 0 20px rgba(57,255,20,0.5)', // subtle neon glow
+        //boxShadow: '0 0 20px rgba(57,255,20,0.5)',
+        //mx: 'auto',
       }}
     >
       <Image
@@ -69,18 +69,25 @@ const Navigation = ({ data }: Props) => (
     
 
     <Box>
-      <Stack spacing={1}>
-        <Link href="#about" underline="none">
-          About
-        </Link>
-        <Link href="#projects" underline="none">
-          Projects
-        </Link>
-        <Link href="#experience" underline="none">
-          Experience
-        </Link>
-      </Stack>
+        <Stack spacing={1}>
+            {['about', 'projects', 'experience'].map((id) => (
+                <Link
+                    key={id}
+                    href={`#${id}`}
+                    underline="none"
+                    color="primary"
+                    sx={{
+                    textTransform: 'capitalize',
+                    fontWeight: 600,
+                    '&:hover': { textDecoration: 'underline' },
+                    }}
+                >
+                    {id}
+                </Link>
+            ))}
+        </Stack>
     </Box>
+
 
     <Box sx={{ mt: { md: 'auto', xs: 0 } }}>
       <Stack direction="row" spacing={1}>

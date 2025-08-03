@@ -1,13 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import { GetStaticProps } from 'next';
-import { CssVarsProvider, Box, CssBaseline } from '@mui/joy';
 
-import theme from '../theme/theme';
+import '../styles/globals.css';
 import Navigation from '../components/Navigation';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import Experience from '../components/Experience';
+import { Box } from '@mui/joy';
+
+import { LayoutProvider } from '../components/ThemeSwitcherLayout';
 
 type Data = {
   navigation: {
@@ -32,6 +34,7 @@ type Data = {
     role: string;
     period: string;
     description: string;
+    link: string;
   }[];
 };
 
@@ -44,9 +47,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function Home({ data }: { data: Data }) {
   return (
-    <CssVarsProvider defaultMode="dark" theme={theme}>
-      <CssBaseline />
-      
+    <LayoutProvider >
       <Box
         component="main"
         sx={{
@@ -58,6 +59,7 @@ export default function Home({ data }: { data: Data }) {
           gap: 6,
           maxWidth: 1200,
           mx: 'auto',
+          body:'#f00'
         }}
       >
         <Box
@@ -76,7 +78,6 @@ export default function Home({ data }: { data: Data }) {
           <Experience experience={data.experience} />
         </Box>
       </Box>
-
-    </CssVarsProvider>
+    </LayoutProvider>
   );
 }

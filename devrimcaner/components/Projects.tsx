@@ -70,9 +70,7 @@ const Projects = ({ projects }: Props) => (
               </Chip>
             ))}
           </Stack>
-
-          <Divider sx={{ my: 2 }} />
-          {/* optional secondary link or nothing since title is primary link */}
+          
         </Card>
       ))}
     </Stack>
