@@ -49,12 +49,14 @@
       "company": "Tech Corp",
       "role": "Frontend Developer",
       "period": "Jan 2022 - Present",
+      "link": "https://techcorp.example.com",
       "description": "Developed and maintained scalable UI components using React."
     },
     {
       "company": "Design Studio",
       "role": "UI Designer",
       "period": "2020 - 2022",
+      "link": "https://techcorp.example.com",
       "description": "Designed modern interfaces with a focus on user experience."
     }
   ]  

@@ -4,9 +4,9 @@ import { IconClock } from '@tabler/icons-react';
 type PeriodField =
   | string
   | {
-      start?: string; // ISO-ish like "2022-12"
-      end?: string;   // ISO-ish like "2023-02"
-      display?: string; // fallback human string
+      start?: string;
+      end?: string;
+      display?: string;
     };
 
 type Project = {
@@ -42,7 +42,17 @@ const Projects = ({ projects }: Props) => (
       {projects.map((project) => (
         <Card key={project.name} variant="outlined" sx={{ p: 3 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 1 }}>
-            <Typography level="title-lg">{project.name}</Typography>
+            <Link
+              href={project.link}
+              target="_blank"
+              underline="none"
+              aria-label={project.name}
+              sx={{ display: 'inline-flex', alignItems: 'center' }}
+            >
+              <Typography level="title-lg" sx={{ mr: 1 }}>
+                {project.name}
+              </Typography>
+            </Link>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
               <IconClock size={16} aria-label="period" />
               <Typography level="body-xs">{formatPeriod(project.period)}</Typography>
@@ -62,10 +72,7 @@ const Projects = ({ projects }: Props) => (
           </Stack>
 
           <Divider sx={{ my: 2 }} />
-
-          <Link href={project.link} target="_blank" underline="none" aria-label={`View ${project.name}`}>
-            View Project
-          </Link>
+          {/* optional secondary link or nothing since title is primary link */}
         </Card>
       ))}
     </Stack>
