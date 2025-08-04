@@ -62,7 +62,7 @@ const Experience = ({ experience }: Props) => (
           {job.techs && job.techs.length > 0 && (
             <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap' }}>
               {job.techs.map((t) => (
-                <Chip key={t} size="sm" variant="soft" sx={{ padding: '5px 10px' }}>
+                <Chip key={t} size="sm" variant="soft" sx={{ padding: '5px 10px', marginTop:'4px' }}>
                   {t}
                 </Chip>
               ))}

@@ -1,5 +1,4 @@
 import { extendTheme, Theme } from '@mui/joy/styles';
-import { PaletteColorOptions } from '@mui/material';
 
 const neonGreen = {
   50: '#e6fff5',
@@ -33,8 +32,6 @@ const theme = extendTheme({
         neutral: {
           softBg: '#102e24',
           softColor: neonGreen[100],
-          //softBg: '#142721',
-          //softColor: '#a3ccb8',
         },
         // Add custom custom colors if desired:
         // e.g. custom success, warning, etc.
@@ -116,6 +113,11 @@ const theme = extendTheme({
         },
       },
     },
+    JoyStack:{
+        defaultProps: {
+        useFlexGap: true,
+      },
+    }
   },
 });
 
