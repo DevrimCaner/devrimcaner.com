@@ -1,4 +1,4 @@
-import { Box, Typography, Card, Link, Chip, Stack, Divider } from '@mui/joy';
+import { Box, Typography, Card, Link, Chip, Stack } from '@mui/joy';
 import { IconClock } from '@tabler/icons-react';
 
 type PeriodField =

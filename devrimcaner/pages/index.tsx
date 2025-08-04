@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { GetStaticProps } from 'next';
 
-import '../styles/globals.css';
 import Navigation from '../components/Navigation';
 import About from '../components/About';
 import Projects from '../components/Projects';
