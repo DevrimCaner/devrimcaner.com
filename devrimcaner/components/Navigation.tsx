@@ -49,7 +49,7 @@ const Navigation = ({ data }: Props) => (
       }}
     >
       <Image
-        src="/profile.png"
+        src="/profile.jpg"
         alt={`${data.name} profile`}
         fill
         sizes="120px"
@@ -94,12 +94,12 @@ const Navigation = ({ data }: Props) => (
       <Stack direction="row" spacing={1}>
         {data.Social.linkedin && (
           <Link href={data.Social.linkedin} target="_blank" aria-label="LinkedIn">
-            <IconBrandLinkedin size={20} />
+            <IconBrandLinkedin size={30} />
           </Link>
         )}
         {data.Social.Github && (
           <Link href={data.Social.Github} target="_blank" aria-label="GitHub">
-            <IconBrandGithub size={20} />
+            <IconBrandGithub size={30} />
           </Link>
         )}
       </Stack>

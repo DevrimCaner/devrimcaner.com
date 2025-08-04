@@ -2,64 +2,75 @@
   "navigation": {
     "name": "Devrim ÖKDEM",
     "title": "DevOps Engineer",
-    "bio": "Short description, I build accessible, pixel-perfect digital experiences for the web 💻.",
+    "bio": "",
     "Social": {
-        "linkedin": "https://www.linkedin.com/",
-        "Github": "https://www.github..com/"
+        "linkedin": "https://www.linkedin.com/in/devrimcaner/",
+        "Github": "https://github.com/DevrimCaner/"
     }
   },
-  "about": "I am a DevOps Engineer with a strong focus on automating workflows, optimizing cloud infrastructure, and enhancing development pipelines. With experience in tools such as Docker, Kubernetes, Jenkins, and Terraform, I specialize in creating reliable CI/CD processes that speed up delivery and improve system stability. I enjoy bridging the gap between development and operations by fostering a culture of collaboration, continuous improvement, and proactive monitoring. My background spans cloud platforms like AWS and Azure, infrastructure as code, and container orchestration, enabling me to design and maintain highly available, secure, and scalable systems. I am passionate about solving complex problems, reducing manual overhead through automation, and ensuring that applications run efficiently from development to production.",
+  "about": "I'm a Software Developer with 5 years of experience in the hosting industry. I've had a passion for computers and games since childhood and that passion evolved into software development. I've worked on various web projects and I'm eager to learn more. I have a passion for creating user-friendly interfaces and software that consumers will love. I am dedicated to examining open-source projects and continuously improving myself by staying up-to-date with emerging technologies. I take pleasure in contributing to team-oriented projects by fulfilling my tasks thoroughly and making valuable contributions with my problem-solving skills.",
   "projects": [
     {
-      "name": "Portfolio Website",
-      "description": "Video course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more..",
-      "link": "https://example.com",
+      "name": "BackLogger50",
+      "description": "BackLogger50 is an web app for back logging video games which is made with ReactJS and PHP . I made this project for CS50x course final project",
+      "link": "https://github.com/DevrimCaner/BackLogger50",
       "period": {
-        "start": "2022-12",
-        "end": "2023-02",
-        "display": "Dec 2022 - Feb 2023"
+        "start": "2023",
+        "end": "2023",
+        "display": "Oct 2023"
       },
-      "techs": ["HTML & CSS", "Javascript", "PHP"]
+      "techs": ["HTML & CSS", "Javascript", "PHP", "SQL"]
     },
     {
-      "name": "Markdown Blog",
-      "description": "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-      "link": "https://github.com/janedoe/blog",
+      "name": "Ecbus.net",
+      "description": "I worked as an outsourcer in this project. The project covers all operations of a bus company and includes tracking the locations and engine information of buses. My task was developing the web part of the application. I use Javascript Jquery for frontend and PHP for backend.",
+      "link": "#projects",
       "period": {
-        "start": "2022-09",
-        "end": "2022-11",
-        "display": "Sep - Nov 2022"
+        "start": "2021",
+        "end": "2021",
+        "display": "Feb 2021"
       },
-      "techs": ["HTML & CSS", "Javascript", "Python"]
+      "techs": ["HTML & CSS", "Javascript", "PHP", "SQL"]
     },
     {
-      "name": "Wordpress Theme",
-      "description": "Collaborated with other student designers and engineers on pro-bono projects to create new brands, design systems, and websites for organizations in the community.",
-      "link": "https://github.com/janedoe/blog",
+      "name": "Personal & Professional Websites",
+      "description": "I made some website projects for personal and business use. I made myself a personal website which uses HTML CSS and Javascript. In the business side I made PHP and Jquery based CMS websites for avcimakina.com.tr and eayk.org.",
+      "link": "#projects",
       "period": {
-        "start": "2022-09",
-        "end": "2022-11",
-        "display": "Sep - Nov 2022"
+        "start": "2020",
+        "end": "2021",
+        "display": "2020 - 2021"
       },
-      "techs": ["HTML & CSS", "Javascript", "Python"]
+      "techs": ["HTML & CSS", "Javascript", "PHP", "SQL"]
+    },
+    {
+      "name": "Edge of Coin",
+      "description": "This is an hyper casual mobile game which is made by Unity 3D and C#. This project is made for understanding Unity and Android market work.",
+      "link": "#projects",
+      "period": {
+        "start": "2016",
+        "end": "2017",
+        "display": "Oct 2017"
+      },
+      "techs": ["Unity", "C#"]
     }
   ],
   "experience": [
     {
-      "company": "Tech Corp",
-      "role": "Frontend Developer",
-      "period": "Jan 2022 - Present",
-      "link": "https://techcorp.example.com",
-      "description": "Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
-      "techs": ["HTML & CSS", "Javascript", "PHP"]
+      "company": "Maritimetrainer",
+      "role": "DevOps Engineer",
+      "period": "Feb 2024 - Present",
+      "link": "https://maritimetrainer.com/",
+      "description": "In this role, I am responsible for managing both online and offline systems by performing updates, installations, and providing support as needed. My responsibilities include automating processes using Bash scripting and Python. Additionally, I leverage my expertise in Linux, PHP-FPM, and MySQL during system updates and installations to ensure smooth and efficient operations.",
+      "techs": ["Linux", "Bash", "Pyhton", "PHP"]
     },
     {
-      "company": "Design Studio",
-      "role": "UI Designer",
-      "period": "2020 - 2022",
-      "link": "https://techcorp.example.com",
-      "description": "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
-      "techs": ["SQL", "Linux", "Windows", "Plesk", "cPanel"]
+      "company": "NiobeHosting",
+      "role": "System Support Specialist",
+      "period": "2019 - 2024",
+      "link": "https://www.niobehosting.com/",
+      "description": "In this position my main role is Providing technical support to customers by answering support tickets and phone calls and Fixing the errors checking in Linux, centOS, Windows Server , Plesk , cPanel , DirectAdmin, IceWarp , vmware , hyper-V , PHP , ASP .NET , Wordpress and similar systems. Beside my main role I developed some apps and tools like Windows service App in C# .net and PHP to make our job easier. I improved my communication, problem-solving and Server Management skills in this role .",
+      "techs": ["Linux", "Windows", "SQL", "PHP", "C#"]
     }
   ]  
 }
