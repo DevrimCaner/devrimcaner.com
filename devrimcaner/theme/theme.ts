@@ -27,36 +27,44 @@ const theme = extendTheme({
           solidHoverBg: neonGreen[400],
           plainColor: neonGreen[500],
           outlinedBorder: neonGreen[500],
-          // You can add more shades if needed
         },
         neutral: {
           softBg: '#102e24',
           softColor: neonGreen[100],
         },
-        // Add custom custom colors if desired:
         // e.g. custom success, warning, etc.
       },
     },
     light: {
       palette: {
         background: {
-          body: '#f9fdfb', // very dark background
+          body: '#f4f9f6',
           surface: '#fff',
         },
         primary: {
-          solidBg: neonGreen[500],
-          solidHoverBg: neonGreen[400],
+          solidBg: neonGreen[700],
+          solidHoverBg: neonGreen[100],
           plainColor: neonGreen[500],
           outlinedBorder: neonGreen[500],
-          // You can add more shades if needed
         },
         neutral: {
-          // default text / secondary
-          solidBg: '#2a2d47',
+            softBg: neonGreen[50],
+            softColor:  neonGreen[800],
+            
+            //softBg: '#f2fbf8',
+            //softColor: '#0a1f17',
         },
-        // Add custom custom colors if desired:
         // e.g. custom success, warning, etc.
       },
+      components: {
+        JoyLink: {
+            styleOverrides: {
+                root: {
+                    color: neonGreen[800],
+                },
+            },
+        },
+    },
     },
   },
 
