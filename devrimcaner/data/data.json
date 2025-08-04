@@ -2,7 +2,7 @@
   "navigation": {
     "name": "Devrim ÖKDEM",
     "title": "DevOps Engineer",
-    "bio": "Short description about me sadgasd asdgsadg sadgss gasdgasg sagsagas 💻.",
+    "bio": "Short description, I build accessible, pixel-perfect digital experiences for the web 💻.",
     "Social": {
         "linkedin": "https://www.linkedin.com/",
         "Github": "https://www.github..com/"
@@ -12,7 +12,7 @@
   "projects": [
     {
       "name": "Portfolio Website",
-      "description": "A sleek personal website built with Next.js and MUI.",
+      "description": "Video course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more..",
       "link": "https://example.com",
       "period": {
         "start": "2022-12",
@@ -23,7 +23,7 @@
     },
     {
       "name": "Markdown Blog",
-      "description": "A statically generated blog using markdown files.",
+      "description": "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
       "link": "https://github.com/janedoe/blog",
       "period": {
         "start": "2022-09",
@@ -33,8 +33,8 @@
       "techs": ["HTML & CSS", "Javascript", "Python"]
     },
     {
-      "name": "Markdown Blog 2",
-      "description": "A statically generated blog using markdown files.",
+      "name": "Wordpress Theme",
+      "description": "Collaborated with other student designers and engineers on pro-bono projects to create new brands, design systems, and websites for organizations in the community.",
       "link": "https://github.com/janedoe/blog",
       "period": {
         "start": "2022-09",
@@ -50,14 +50,16 @@
       "role": "Frontend Developer",
       "period": "Jan 2022 - Present",
       "link": "https://techcorp.example.com",
-      "description": "Developed and maintained scalable UI components using React."
+      "description": "Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
+      "techs": ["HTML & CSS", "Javascript", "PHP"]
     },
     {
       "company": "Design Studio",
       "role": "UI Designer",
       "period": "2020 - 2022",
       "link": "https://techcorp.example.com",
-      "description": "Designed modern interfaces with a focus on user experience."
+      "description": "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
+      "techs": ["SQL", "Linux", "Windows", "Plesk", "cPanel"]
     }
   ]  
 }

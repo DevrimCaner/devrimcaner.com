@@ -1,76 +1,118 @@
-import { extendTheme } from '@mui/joy/styles';
+import { extendTheme, Theme } from '@mui/joy/styles';
+import { PaletteColorOptions } from '@mui/material';
 
+const neonGreen = {
+  50: '#e6fff5',
+  100: '#b3ffe0',
+  200: '#80ffcc',
+  300: '#4dffb8',
+  400: '#1affa3',
+  500: '#00ff93', // main neon green
+  600: '#00e683',
+  700: '#00cc73',
+  800: '#00b363',
+  900: '#009953',
+};
+
+// Extend Joy UI theme
 const theme = extendTheme({
-  // Global Settings
-  typography: {
-    // Fonts
-  },
-  components: {
-    JoyLink: {
-      defaultProps: {
-        color: 'primary',
-        underline: 'none',
-      },
-      styleOverrides: {
-        root: {
-          fontWeight: 600,
-          position: 'relative',
-          '&:hover': {
-            textDecoration: 'none',
-          },
-          '&:after': {
-            content: '""',
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            bottom: -2,
-            height: '2px',
-            background: 'currentColor',
-            opacity: 0,
-            transition: 'opacity .2s ease',
-          },
-          '&:hover:after': {
-            opacity: 0.7,
-          },
-        },
-      },
-    },
-  },
   colorSchemes: {
-    light: {
-      palette: {
-        primary: {
-          solidBg: '#00FF7F', // neon green
-          solidColor: '#000',
-          plainColor: '#00FF7F',
-          outlinedBorder: '#00FF7F',
-        },
-        background: {
-          body: '#f0f2f5', // light bg
-          surface: '#ffffff', // card bg
-        },
-        text: {
-          // overrides
-        },
-        neutral: {
-          // normal text / border colors
-        },
-      },
-    },
     dark: {
       palette: {
-        primary: {
-          solidBg: '#39FF14', // neon green
-          solidColor: '#000',
-          plainColor: '#39FF14',
-          outlinedBorder: '#39FF14',
-        },
         background: {
-          body: '#0f111a', // dark bg
-          surface: '#1d1f33', // card
+          body: '#0a1512', // very dark background
+          surface: '#0f1e19',
         },
-        text: {
-          // light colors
+        primary: {
+          solidBg: neonGreen[500],
+          solidHoverBg: neonGreen[400],
+          plainColor: neonGreen[500],
+          outlinedBorder: neonGreen[500],
+          // You can add more shades if needed
+        },
+        neutral: {
+          softBg: '#102e24',
+          softColor: neonGreen[100],
+          //softBg: '#142721',
+          //softColor: '#a3ccb8',
+        },
+        // Add custom custom colors if desired:
+        // e.g. custom success, warning, etc.
+      },
+    },
+    light: {
+      palette: {
+        background: {
+          body: '#f9fdfb', // very dark background
+          surface: '#fff',
+        },
+        primary: {
+          solidBg: neonGreen[500],
+          solidHoverBg: neonGreen[400],
+          plainColor: neonGreen[500],
+          outlinedBorder: neonGreen[500],
+          // You can add more shades if needed
+        },
+        neutral: {
+          // default text / secondary
+          solidBg: '#2a2d47',
+        },
+        // Add custom custom colors if desired:
+        // e.g. custom success, warning, etc.
+      },
+    },
+  },
+
+  fontFamily: {
+    body: '"Inter", system-ui, -apple-system, sans-serif',
+    display: '"Inter", system-ui, -apple-system, sans-serif',
+  },
+
+  typography: {
+    // custom variant you can use via sx or component overrides
+    body1: {
+      fontSize: '1rem',
+      lineHeight: 1.5,
+    },
+    h6: {
+      textDecoration: 'underline',
+      textDecorationColor: neonGreen[500],
+    },
+  },
+
+  components: {
+    // Example: customize Button globally
+    JoyButton: {
+      variants: [
+        {
+          props: { variant: 'solid', color: 'primary' },
+          style: {
+            borderRadius: 8,
+            textTransform: 'uppercase',
+            fontWeight: 600,
+            // Base style:
+            boxShadow: '0 0 12px rgba(0, 255, 147, 0.6)',
+            transition: 'transform .2s, box-shadow .2s',
+            // Custom hover set via ":hover"
+            '&:hover': {
+              transform: 'scale(1.03)',
+              boxShadow: '0 0 24px rgba(0, 255, 147, 0.9)',
+            },
+          },
+        },
+      ],
+    },
+    JoyLink: {
+      styleOverrides: {
+        root: {
+          position: 'relative',
+          color: neonGreen[500],
+          textDecoration: 'none',
+          fontWeight: 500,
+          '&:hover': {
+            textDecoration: 'underline',
+            textDecorationColor: neonGreen[400],
+          },
         },
       },
     },

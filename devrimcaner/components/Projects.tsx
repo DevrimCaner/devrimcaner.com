@@ -65,7 +65,7 @@ const Projects = ({ projects }: Props) => (
 
           <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap' }}>
             {project.techs.map((t) => (
-              <Chip key={t} size="sm" variant="soft">
+              <Chip key={t} size="sm" variant="soft" sx={{padding:'5px 10px'}}>
                 {t}
               </Chip>
             ))}

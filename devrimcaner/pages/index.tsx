@@ -35,6 +35,7 @@ type Data = {
     period: string;
     description: string;
     link: string;
+    techs: string[];
   }[];
 };
 
@@ -74,8 +75,8 @@ export default function Home({ data }: { data: Data }) {
 
         <Box sx={{ flex: 1 }}>
           <About content={data.about} />
-          <Projects projects={data.projects} />
           <Experience experience={data.experience} />
+          <Projects projects={data.projects} />
         </Box>
       </Box>
     </LayoutProvider>

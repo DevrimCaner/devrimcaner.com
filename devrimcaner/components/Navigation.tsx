@@ -43,8 +43,8 @@ const Navigation = ({ data }: Props) => (
         overflow: 'hidden',
         border: '2px solid',
         borderRadius: '50%',
-        //borderColor: 'primary.solidBg',
-        //boxShadow: '0 0 20px rgba(57,255,20,0.5)',
+        borderColor: 'primary.solidBg',
+        boxShadow: '0 0 20px rgba(0,255,147,0.5)',
         //mx: 'auto',
       }}
     >
@@ -70,7 +70,7 @@ const Navigation = ({ data }: Props) => (
 
     <Box>
         <Stack spacing={1}>
-            {['about', 'projects', 'experience'].map((id) => (
+            {['about', 'experience', 'projects'].map((id) => (
                 <Link
                     key={id}
                     href={`#${id}`}
@@ -80,6 +80,7 @@ const Navigation = ({ data }: Props) => (
                     textTransform: 'capitalize',
                     fontWeight: 600,
                     '&:hover': { textDecoration: 'underline' },
+                    padding:'5px 0px'
                     }}
                 >
                     {id}
