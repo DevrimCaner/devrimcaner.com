@@ -1,61 +1,38 @@
-import { Box, Typography, Card, Link, Chip, Stack } from '@mui/joy';
+import { Box, Typography, Card, Chip, Stack } from '@mui/joy';
 import { IconClock } from '@tabler/icons-react';
+import ExternalLink from './ExternalLink';
+import type { Project } from '../lib/portfolio';
 
-type PeriodField =
-  | string
-  | {
-      start?: string;
-      end?: string;
-      display?: string;
-    };
-
-type Project = {
-  name: string;
-  description: string;
-  link: string;
-  period: PeriodField;
-  techs: string[];
-};
-
-type Props = {
-  projects: Project[];
-};
-
-const formatPeriod = (period: PeriodField): string => {
-  if (!period) return '';
-  if (typeof period === 'string') return period;
-  if (period.display) return period.display;
-  if (period.start && period.end) {
-    return `${period.start} - ${period.end}`;
-  }
-  if (period.start) return period.start;
-  if (period.end) return period.end;
-  return '';
-};
+type Props = { projects: Project[] };
 
 const Projects = ({ projects }: Props) => (
-  <Box id="projects" sx={{ mb: 8 }}>
-    <Typography level="h2" sx={{ mb: 2 }}>
+  <Box aria-labelledby="projects-heading" component="section" id="projects" sx={{ mb: 8 }}>
+    <Typography id="projects-heading" level="h2" sx={{ mb: 2 }}>
       Projects
     </Typography>
     <Stack spacing={3}>
       {projects.map((project) => (
-        <Card key={project.name} variant="outlined" sx={{ p: 3 }}>
+        <Card key={project.id} variant="outlined" sx={{ p: 3 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 1 }}>
-            <Link
-              href={project.link}
-              target="_blank"
-              underline="none"
-              aria-label={project.name}
-              sx={{ display: 'inline-flex', alignItems: 'center' }}
-            >
+            {project.url ? (
+              <ExternalLink
+                aria-label={`Open ${project.name}`}
+                href={project.url}
+                sx={{ display: 'inline-flex', alignItems: 'center' }}
+                underline="none"
+              >
+                <Typography level="title-lg" sx={{ mr: 1 }}>
+                  {project.name}
+                </Typography>
+              </ExternalLink>
+            ) : (
               <Typography level="title-lg" sx={{ mr: 1 }}>
                 {project.name}
               </Typography>
-            </Link>
+            )}
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-              <IconClock size={16} aria-label="period" />
-              <Typography level="body-xs">{formatPeriod(project.period)}</Typography>
+              <IconClock aria-hidden="true" size={16} />
+              <Typography level="body-xs">{project.period.display}</Typography>
             </Box>
           </Box>
 

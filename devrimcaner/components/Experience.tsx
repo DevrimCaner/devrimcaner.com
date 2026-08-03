@@ -1,27 +1,18 @@
-import { Box, Typography, Card, Link, Chip, Stack } from '@mui/joy';
+import { Box, Typography, Card, Chip, Stack } from '@mui/joy';
 import { IconClock } from '@tabler/icons-react';
+import ExternalLink from './ExternalLink';
+import type { Experience as ExperienceItem } from '../lib/portfolio';
 
-type ExperienceItem = {
-  company: string;
-  role: string;
-  period: string;
-  description: string;
-  link?: string;
-  techs?: string[];
-};
-
-type Props = {
-  experience: ExperienceItem[];
-};
+type Props = { experience: ExperienceItem[] };
 
 const Experience = ({ experience }: Props) => (
-  <Box id="experience" sx={{ mb: 8 }}>
-    <Typography level="h2" sx={{ mb: 2 }}>
+  <Box aria-labelledby="experience-heading" component="section" id="experience" sx={{ mb: 8 }}>
+    <Typography id="experience-heading" level="h2" sx={{ mb: 2 }}>
       Experience
     </Typography>
     <Stack spacing={3}>
       {experience.map((job) => (
-        <Card key={job.company} variant="outlined" sx={{ p: 3 }}>
+        <Card key={job.id} variant="outlined" sx={{ p: 3 }}>
           <Box
             sx={{
               display: 'flex',
@@ -31,10 +22,9 @@ const Experience = ({ experience }: Props) => (
             }}
           >
             <Box>
-              {job.link ? (
-                <Link
-                  href={job.link}
-                  target="_blank"
+              {job.url ? (
+                <ExternalLink
+                  href={job.url}
                   underline="none"
                   aria-label={`${job.role} at ${job.company}`}
                   sx={{ display: 'inline-flex', alignItems: 'baseline' }}
@@ -42,24 +32,28 @@ const Experience = ({ experience }: Props) => (
                   <Typography level="title-md" sx={{ mr: 1 }}>
                     {job.role} @ {job.company}
                   </Typography>
-                </Link>
+                </ExternalLink>
               ) : (
                 <Typography level="title-md" sx={{ mr: 1 }}>
                   {job.role} @ {job.company}
                 </Typography>
               )}
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mt: 0.5 }}>
-                <IconClock size={16} aria-label="period" />
+                <IconClock aria-hidden="true" size={16} />
                 <Typography level="body-xs">{job.period}</Typography>
               </Box>
             </Box>
           </Box>
 
-          <Typography level="body-sm" sx={{ mt: 1 }}>
-            {job.description}
-          </Typography>
+          <Box component="ul" sx={{ margin: '12px 0 0', paddingInlineStart: '20px' }}>
+            {job.description.map((item) => (
+              <Typography component="li" key={item} level="body-sm" sx={{ mb: 0.5 }}>
+                {item}
+              </Typography>
+            ))}
+          </Box>
 
-          {job.techs && job.techs.length > 0 && (
+          {job.techs.length > 0 && (
             <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap' }}>
               {job.techs.map((t) => (
                 <Chip key={t} size="sm" variant="soft" sx={{ padding: '5px 10px', marginTop:'4px' }}>
