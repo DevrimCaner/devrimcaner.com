@@ -1,22 +1,9 @@
-import Image from 'next/image';
 import { Box, Typography, Link, Stack } from '@mui/joy';
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import ExternalLink from './ExternalLink';
+import type { NavigationData } from '../lib/portfolio';
 
-type Social = {
-  linkedin?: string;
-  Github?: string;
-};
-
-type NavData = {
-  name: string;
-  title: string;
-  bio: string;
-  Social: Social;
-};
-
-type Props = {
-  data: NavData;
-};
+type Props = { data: NavigationData };
 
 const Navigation = ({ data }: Props) => (
   <Box
@@ -30,77 +17,77 @@ const Navigation = ({ data }: Props) => (
       gap: 3,
       minWidth: 220,
       pr: 4,
-      height: { md: 'calc(100vh - 120px)', xs: 'auto' }, // constrain to viewport on md+
+      height: { md: 'calc(100vh - 120px)', xs: 'auto' },
     }}
   >
-    <Box sx={{ }}>
-    <Box
-      sx={{
-        width: 200,
-        height: 200,
-        mb: 2,
-        position: 'relative',
-        overflow: 'hidden',
-        border: '2px solid',
-        borderRadius: '50%',
-        borderColor: 'primary.solidBg',
-        boxShadow: '0 0 20px rgba(0,255,147,0.5)',
-        //mx: 'auto',
-      }}
-    >
-      <Image
-        src="/profile.jpg"
-        alt={`${data.name} profile`}
-        fill
-        sizes="120px"
-        style={{ objectFit: 'cover' }}
-        priority
-      />
-    </Box>
+    <Box>
+      <Box
+        sx={{
+          width: { xs: 160, md: 200 },
+          aspectRatio: '1',
+          mb: 2,
+          overflow: 'hidden',
+          border: '2px solid',
+          borderRadius: '50%',
+          borderColor: 'primary.solidBg',
+          boxShadow: '0 0 20px rgba(0,255,147,0.5)',
+        }}
+      >
+        <Box
+          alt={`${data.name} profile`}
+          component="img"
+          fetchPriority="high"
+          height="200"
+          loading="eager"
+          src="./profile.jpg"
+          width="200"
+          sx={{ display: 'block', height: '100%', objectFit: 'cover', width: '100%' }}
+        />
+      </Box>
 
-    <Typography level="h3" sx={{ mb: 0.5 }}>
+    <Typography component="h1" level="h1" sx={{ mb: 0.5 }}>
       {data.name}
     </Typography>
     <Typography level="body-sm" sx={{ mb: 1, color: 'text.secondary' }}>
       {data.title}
     </Typography>
-    <Typography level="body-md">{data.bio}</Typography>
-  </Box>
+    {data.bio && <Typography level="body-md">{data.bio}</Typography>}
+    </Box>
     
 
-    <Box>
-        <Stack spacing={1}>
-            {['about', 'experience', 'projects'].map((id) => (
-                <Link
-                    key={id}
-                    href={`#${id}`}
-                    underline="none"
-                    color="primary"
-                    sx={{
-                    textTransform: 'capitalize',
-                    fontWeight: 600,
-                    '&:hover': { textDecoration: 'underline' },
-                    padding:'5px 0px'
-                    }}
-                >
-                    {id}
-                </Link>
-            ))}
-        </Stack>
+    <Box aria-label="Profile sections" component="nav">
+      <Stack spacing={1}>
+        {['about', 'experience', 'projects'].map((id) => (
+          <Link
+            key={id}
+            color="primary"
+            href={`#${id}`}
+            sx={{
+              textTransform: 'capitalize',
+              fontWeight: 600,
+              '&:hover': { textDecoration: 'underline' },
+              padding: '5px 0px',
+            }}
+            underline="none"
+          >
+            {id}
+          </Link>
+        ))}
+      </Stack>
     </Box>
 
 
     <Box sx={{ mt: { md: 'auto', xs: 0 } }}>
       <Stack direction="row" spacing={1}>
-        {data.Social.linkedin && (
-          <Link href={data.Social.linkedin} target="_blank" aria-label="LinkedIn">
-            <IconBrandLinkedin size={30} />
-          </Link>
+        {data.social.linkedin && (
+          <ExternalLink aria-label="Visit Devrim ÖKDEM on LinkedIn" href={data.social.linkedin}>
+            <IconBrandLinkedin aria-hidden="true" size={30} />
+          </ExternalLink>
         )}
-        {data.Social.Github && (
-          <Link href={data.Social.Github} target="_blank" aria-label="GitHub">
-            <IconBrandGithub size={30} />
-          </Link>
+        {data.social.github && (
+          <ExternalLink aria-label="Visit Devrim ÖKDEM on GitHub" href={data.social.github}>
+            <IconBrandGithub aria-hidden="true" size={30} />
+          </ExternalLink>
         )}
       </Stack>
     </Box>

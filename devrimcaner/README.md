@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# devrimcaner.com
 
-## Getting Started
+A static portfolio built with the Next.js Pages Router, TypeScript, and Joy UI. It uses `output: 'export'`, so the production result is plain HTML, CSS, JavaScript, and static assets—no backend, API routes, database, or server runtime is required.
 
-First, run the development server:
+## Requirements
+
+- Node.js 22 or later
+- npm 10 or later
+
+## Local development
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run typecheck
+npm run build
+npm audit --omit=dev
+```
 
-## Learn More
+`npm run build` validates TypeScript and creates the deployable static site in `out/`.
 
-To learn more about Next.js, take a look at the following resources:
+GitHub Actions runs the production dependency audit, lint, typecheck, and static build for pushes and pull requests.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `pages/` — Pages Router entry points, document markup, and page metadata.
+- `components/` — reusable presentational components.
+- `data/data.json` — portfolio content.
+- `lib/portfolio.ts` — shared content contract used to type-check `data.json` at build time.
+- `lib/site.ts` — canonical site metadata.
+- `public/` — static assets, favicon, crawler files, and the custom-domain `CNAME` file.
+- `theme/` and `styles/` — Joy UI theme and small global accessibility styles.
 
-## Deploy on Vercel
+## Editing portfolio content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `data/data.json`. Keep every record aligned with the TypeScript contract in `lib/portfolio.ts`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Every project and experience entry needs a unique `id`.
+- Project and experience `url` values are optional. When provided, they must be public external URLs.
+- Experience `description` is an array; each item renders as an accessible list item.
+- Keep technology names consistently capitalized.
+
+Run `npm run typecheck` and `npm run build` after content edits. The static import in `pages/index.tsx` ensures invalid content shape fails the build.
+
+## Deployment
+
+Deploy the contents of `out/` to any static host. The custom domain is declared in `public/CNAME`, which is copied into the export. The committed top-level `docs/` directory is the existing GitHub Pages artifact; regenerate it from a successful `out/` build when publishing through that workflow.
+
+Static hosting cannot add application response headers. Configure CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, and frame protection in the hosting/CDN configuration.
