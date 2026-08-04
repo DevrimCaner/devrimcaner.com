@@ -3,12 +3,12 @@ import { IconClock } from '@tabler/icons-react';
 import ExternalLink from './ExternalLink';
 import type { Experience as ExperienceItem } from '../lib/portfolio';
 
-type Props = { experience: ExperienceItem[] };
+type Props = { heading: string; experience: ExperienceItem[] };
 
-const Experience = ({ experience }: Props) => (
+const Experience = ({ heading, experience }: Props) => (
   <Box aria-labelledby="experience-heading" component="section" id="experience" sx={{ mb: 8 }}>
     <Typography id="experience-heading" level="h2" sx={{ mb: 2 }}>
-      Experience
+      {heading}
     </Typography>
     <Stack spacing={3}>
       {experience.map((job) => (

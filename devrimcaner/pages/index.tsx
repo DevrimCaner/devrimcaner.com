@@ -1,35 +1,82 @@
 import Head from 'next/head';
-import portfolioData from '../data/data.json';
-import Navigation from '../components/Navigation';
+import { useMemo, useState } from 'react';
+import { Box, Typography } from '@mui/joy';
 import About from '../components/About';
-import Projects from '../components/Projects';
 import Experience from '../components/Experience';
-import { Box } from '@mui/joy';
-import type { PortfolioData } from '../lib/portfolio';
+import Navigation from '../components/Navigation';
+import Projects from '../components/Projects';
+import LocaleSwitcher from '../components/LocaleSwitcher';
+import { ModeToggle } from '../components/ThemeSwitcherLayout';
+import type { LocaleCode, PortfolioData } from '../lib/portfolio';
+import enData from '../data/en.json';
+import trData from '../data/tr.json';
+import deData from '../data/de.json';
 import { site } from '../lib/site';
 
-const data: PortfolioData = portfolioData;
+const localeModules = {
+  en: enData as PortfolioData,
+  tr: trData as PortfolioData,
+  de: deData as PortfolioData,
+} as const;
+
+const STORAGE_KEY = 'portfolio-language';
+
+const getStoredLocale = (): LocaleCode => {
+  if (typeof window === 'undefined') {
+    return 'en';
+  }
+
+  const stored = window.localStorage.getItem(STORAGE_KEY);
+  return stored === 'en' || stored === 'tr' || stored === 'de' ? (stored as LocaleCode) : 'en';
+};
 
 export default function Home() {
+  const [locale, setLocale] = useState<LocaleCode>(() => getStoredLocale());
+  const [data, setData] = useState<PortfolioData>(() => localeModules[getStoredLocale()] as PortfolioData);
+
+  const handleLocaleChange = (nextLocale: LocaleCode) => {
+    window.localStorage.setItem(STORAGE_KEY, nextLocale);
+    setLocale(nextLocale);
+    setData(localeModules[nextLocale] as PortfolioData);
+  };
+
+  const currentSite = useMemo(
+    () => ({
+      title: data.meta?.title ?? site.title,
+      description: data.meta?.description ?? site.description,
+      name: data.navigation?.name ?? site.name,
+      locale: data.meta?.locale ?? site.locale,
+      url: site.url,
+    }),
+    [data],
+  );
+
   return (
     <>
       <Head>
-        <title>{site.title}</title>
-        <meta content={site.description} name="description" />
-        <link href={`${site.url}/`} rel="canonical" />
+        <title>{currentSite.title}</title>
+        <meta content={currentSite.description} name="description" />
+        <link href={`${currentSite.url}/`} rel="canonical" />
         <link href="./favicon.svg" rel="icon" type="image/svg+xml" />
-        <meta content={site.title} property="og:title" />
-        <meta content={site.description} property="og:description" />
+        <meta content={currentSite.title} property="og:title" />
+        <meta content={currentSite.description} property="og:description" />
         <meta content="website" property="og:type" />
-        <meta content={`${site.url}/`} property="og:url" />
-        <meta content={`${site.url}/profile.jpg`} property="og:image" />
-        <meta content={site.name} property="og:site_name" />
-        <meta content={site.locale} property="og:locale" />
+        <meta content={`${currentSite.url}/`} property="og:url" />
+        <meta content={`${currentSite.url}/profile.jpg`} property="og:image" />
+        <meta content={currentSite.name} property="og:site_name" />
+        <meta content={currentSite.locale} property="og:locale" />
         <meta content="summary" name="twitter:card" />
-        <meta content={site.title} name="twitter:title" />
-        <meta content={site.description} name="twitter:description" />
-        <meta content={`${site.url}/profile.jpg`} name="twitter:image" />
+        <meta content={currentSite.title} name="twitter:title" />
+        <meta content={currentSite.description} name="twitter:description" />
+        <meta content={`${currentSite.url}/profile.jpg`} name="twitter:image" />
       </Head>
+
+      <LocaleSwitcher
+        locale={locale}
+        modeToggle={<ModeToggle />}
+        onLocaleChange={handleLocaleChange}
+      />
+
       <Box
         id="main-content"
         component="main"
@@ -55,9 +102,22 @@ export default function Home() {
         </Box>
 
         <Box sx={{ flex: 1 }}>
-          <About content={data.about} />
-          <Experience experience={data.experience} />
-          <Projects projects={data.projects} />
+          <About data={data.about} />
+          <Experience heading={data.experience.heading} experience={data.experience.items} />
+          <Projects heading={data.projects.heading} projects={data.projects.items} />
+          {/*          
+            <Box component="section" id="contact" sx={{ mb: 8 }}>
+              <Typography id="contact-heading" level="h2" sx={{ mb: 1 }}>
+                {data.contact.heading}
+              </Typography>
+              <Typography level="body-lg" sx={{ mb: 2 }}>
+                {data.contact.description}
+              </Typography>
+              <Typography component="a" href={`mailto:${data.contact.email}`} level="body-md" sx={{ color: 'primary.plainColor' }}>
+                {data.contact.cta}
+              </Typography>
+            </Box>
+          */}
         </Box>
       </Box>
     </>
