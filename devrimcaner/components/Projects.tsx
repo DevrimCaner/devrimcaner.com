@@ -3,12 +3,12 @@ import { IconClock } from '@tabler/icons-react';
 import ExternalLink from './ExternalLink';
 import type { Project } from '../lib/portfolio';
 
-type Props = { projects: Project[] };
+type Props = { heading: string; projects: Project[] };
 
-const Projects = ({ projects }: Props) => (
+const Projects = ({ heading, projects }: Props) => (
   <Box aria-labelledby="projects-heading" component="section" id="projects" sx={{ mb: 8 }}>
     <Typography id="projects-heading" level="h2" sx={{ mb: 2 }}>
-      Projects
+      {heading}
     </Typography>
     <Stack spacing={3}>
       {projects.map((project) => (

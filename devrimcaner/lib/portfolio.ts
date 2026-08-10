@@ -1,3 +1,5 @@
+export type LocaleCode = 'en' | 'tr' | 'de';
+
 export type SocialLinks = {
   github?: string;
   linkedin?: string;
@@ -8,6 +10,17 @@ export type NavigationData = {
   title: string;
   bio?: string;
   social: SocialLinks;
+  sections?: {
+    about: string;
+    experience: string;
+    projects: string;
+    contact: string;
+  };
+};
+
+export type AboutData = {
+  heading: string;
+  content: string;
 };
 
 export type Project = {
@@ -32,8 +45,29 @@ export type Experience = {
 };
 
 export type PortfolioData = {
+  meta: {
+    title: string;
+    description: string;
+    locale: string;
+  };
   navigation: NavigationData;
-  about: string;
-  projects: Project[];
-  experience: Experience[];
+  about: AboutData;
+  experience: {
+    heading: string;
+    items: Experience[];
+  };
+  projects: {
+    heading: string;
+    items: Project[];
+  };
+  contact: {
+    heading: string;
+    description: string;
+    email: string;
+    cta: string;
+  };
+  footer?: {
+    text: string;
+    builtWith: string;
+  };
 };

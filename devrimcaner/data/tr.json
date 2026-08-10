@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Devrim ÖKDEM | DevOps Engineer",
+    "description": "Otomasyon, altyapı optimizasyonu ve operasyonel verimliliğe odaklanan DevOps Mühendisi Devrim ÖKDEM'in portföyü.",
+    "locale": "tr_TR"
+  },
+  "navigation": {
+    "name": "Devrim ÖKDEM",
+    "title": "DevOps Engineer",
+    "bio": "Modern ekipler için otomasyon, dayanıklı altyapılar ve pratik araçlar geliştiriyorum.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/devrimcaner/",
+      "github": "https://github.com/DevrimCaner/"
+    },
+    "sections": {
+      "about": "Hakkımda",
+      "experience": "Deneyim",
+      "projects": "Projeler",
+      "contact": "İletişim"
+    }
+  },
+  "about": {
+    "heading": "Hakkımda",
+    "content": "2 yıllık uygulamalı DevOps deneyimine ve 6 yılı aşkın BT ve sistem yönetimi tecrübesine sahip bir DevOps Mühendisiyim. Linux, Windows Server, Bash betikleme, Python, PHP-FPM, MySQL, CI/CD ve full-stack araç geliştirme konularında yetkinim. Otomasyon ve izleme çözümlerinin tasarımı, geliştirilmesi ve devreye alınması konusunda deneyim sahibiyim.\n\nŞu anda AWS sertifikaları ve profesyonel eğitimlerle bulut bilişim alanındaki uzmanlığımı geliştiriyor; otomasyon, altyapı optimizasyonu ve operasyonel verimlilik üzerine yoğunlaşıyorum. Açık kaynak projelerini incelemeye, yeni teknolojileri yakından takip etmeye ve ekip odaklı projelere bilinçli katkılar sağlamaya önem veriyorum."
+  },
+  "experience": {
+    "heading": "Deneyim",
+    "items": [
+      {
+        "id": "maritimetrainer-devops-engineer",
+        "company": "Maritimetrainer",
+        "role": "DevOps Engineer",
+        "period": "Şub 2024 - Günümüz",
+        "url": "https://maritimetrainer.com/",
+        "description": [
+          "Birden fazla sunucu üzerinde çevrim içi ve çevrim dışı sistemlerin güncellemelerini, kurulumlarını ve operasyonel desteğini yönetiyorum.",
+          "Bash ve Python kullanarak tekrarlayan sunucu görevlerini ve izleme süreçlerini otomatikleştirerek operasyonel verimliliği önemli ölçüde artırdım ve manuel hataları azalttım.",
+          "Linux, PHP-FPM ve MySQL konularındaki uzmanlığımı kullanarak sistem kararlılığını sağlıyor ve performansı optimize ediyorum.",
+          "Otomatik sunucu yedekleme, uzaktan komut çalıştırma ve sunucu metriklerinin gerçek zamanlı izlenmesini sağlayan full-stack bir araç olan DevOps Lab'i tasarlayıp geliştirdim."
+        ],
+        "techs": [
+          "Linux",
+          "Bash",
+          "Python",
+          "PHP"
+        ]
+      },
+      {
+        "id": "niobe-hosting-support-specialist",
+        "company": "Niobe Hosting",
+        "role": "System Support Specialist",
+        "period": "2019 - 2024",
+        "url": "https://www.niobehosting.com/",
+        "description": [
+          "Linux, Windows Server, CentOS, Plesk, cPanel, DirectAdmin, VMware, Hyper-V, PHP, ASP.NET ve WordPress ortamları için kapsamlı teknik destek sağladım.",
+          "Reseller hosting kullanıcılarının e-posta kullanımını takip etmek için SizeChecker adlı full-stack çözümü bağımsız olarak tasarlayıp geliştirdim ve devreye aldım. Windows Servisi C# ile, web arayüzü ise PHP, JavaScript ve MySQL kullanılarak geliştirildi. Böylece daha önce takip edilemeyen metriklerin doğru şekilde izlenmesi ve raporlanması mümkün hale geldi.",
+          "Yoğun teknik destek taleplerini yönetirken problem çözme, iletişim ve sunucu yönetimi becerilerimi geliştirdim."
+        ],
+        "techs": [
+          "Linux",
+          "Windows",
+          "SQL",
+          "PHP",
+          "C#"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Projeler",
+    "items": [
+      {
+        "id": "devops-lab-maritimetrainer",
+        "name": "DevOps Lab @ Maritimetrainer",
+        "description": "Çevrim dışı sunucular için geliştirilmiş full-stack otomasyon ve izleme aracı. Ön yüz JavaScript, arka uç Django/Python ve SQLite/PostgreSQL ile geliştirildi. Sunucu tarafı işlemleri Bash betikleriyle otomatikleştirildi ve kolay dağıtım için Docker ile containerize edildi.",
+        "url": "https://maritimetrainer.com/",
+        "period": {
+          "display": "Tem 2025"
+        },
+        "techs": [
+          "Python",
+          "Bash",
+          "SQL",
+          "JavaScript",
+          "HTML & CSS"
+        ]
+      },
+      {
+        "id": "backlogger50",
+        "name": "BackLogger50",
+        "description": "BackLogger50, ReactJS ve PHP kullanılarak geliştirilmiş, video oyunları backlog'unu yönetmeye yönelik bir web uygulamasıdır.",
+        "url": "https://github.com/DevrimCaner/BackLogger50",
+        "period": {
+          "display": "Eki 2023"
+        },
+        "techs": [
+          "JavaScript",
+          "PHP",
+          "HTML & CSS",
+          "SQL"
+        ]
+      },
+      {
+        "id": "sizechecker-niobehosting",
+        "name": "SizeChecker @ Niobehosting",
+        "description": "Daha önce takip edilemeyen reseller hosting kullanıcılarının e-posta kullanımını hesaplamak için full-stack bir araç geliştirdim. Windows Servisi C# ile, web arayüzü ise PHP, JavaScript ve MySQL ile geliştirildi. Projenin tasarımı, geliştirilmesi ve yayına alınması tamamen bağımsız olarak gerçekleştirildi.",
+        "url": "https://www.niobehosting.com/",
+        "period": {
+          "display": "Mar 2023"
+        },
+        "techs": [
+          "C#",
+          "PHP",
+          "SQL",
+          "JavaScript",
+          "HTML & CSS"
+        ]
+      },
+      {
+        "id": "ecbus-net",
+        "name": "Ecbus.net",
+        "description": "Otobüs şirketi operasyonları için konum ve motor verilerinin takibini içeren web uygulaması modülleri geliştirdim (ön yüz JavaScript/jQuery, arka uç PHP).",
+        "period": {
+          "display": "Şub 2021"
+        },
+        "techs": [
+          "PHP",
+          "JavaScript",
+          "HTML & CSS",
+          "SQL"
+        ]
+      },
+      {
+        "id": "personal-professional-websites",
+        "name": "Kişisel ve Kurumsal Web Siteleri",
+        "description": "HTML, CSS, JavaScript ve PHP kullanarak kişisel ve kurumsal web siteleri geliştirdim (ör. avcimakina.com.tr, eayk.org).",
+        "period": {
+          "display": "2020 - 2021"
+        },
+        "techs": [
+          "HTML & CSS",
+          "PHP",
+          "JavaScript",
+          "SQL"
+        ]
+      },
+      {
+        "id": "edge-of-coin",
+        "name": "Edge of Coin",
+        "description": "Unity 3D ve C# kullanılarak geliştirilen hyper casual mobil oyun.",
+        "period": {
+          "display": "Eki 2017"
+        },
+        "techs": [
+          "Unity",
+          "C#"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Yetenekler",
+    "items": [
+      "Linux",
+      "Bash",
+      "Python",
+      "PHP-FPM",
+      "MySQL",
+      "CI/CD",
+      "Docker",
+      "AWS",
+      "Otomasyon",
+      "İzleme"
+    ]
+  },
+  "contact": {
+    "heading": "İletişim",
+    "description": "Otomasyon, altyapı ve sürdürülebilir yazılım teslim süreçleri hakkında konuşmaya her zaman açığım.",
+    "email": "hello@devrimcaner.com",
+    "cta": "E-posta Gönder"
+  },
+  "footer": {
+    "text": "© 2026 Devrim ÖKDEM. Next.js ve MUI Joy ile geliştirildi.",
+    "builtWith": "Next.js ile geliştirildi"
+  }
+}

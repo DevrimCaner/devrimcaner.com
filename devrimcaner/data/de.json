@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Devrim ÖKDEM | DevOps Engineer",
+    "description": "Portfolio von Devrim ÖKDEM, einem DevOps Engineer mit Fokus auf Automatisierung, Infrastruktur-Optimierung und operative Effizienz.",
+    "locale": "de_DE"
+  },
+  "navigation": {
+    "name": "Devrim ÖKDEM",
+    "title": "DevOps Engineer",
+    "bio": "Entwicklung von Automatisierungslösungen, robuster Infrastruktur und praxisnahen Tools für moderne Teams.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/devrimcaner/",
+      "github": "https://github.com/DevrimCaner/"
+    },
+    "sections": {
+      "about": "Über mich",
+      "experience": "Berufserfahrung",
+      "projects": "Projekte",
+      "contact": "Kontakt"
+    }
+  },
+  "about": {
+    "heading": "Über mich",
+    "content": "DevOps Engineer mit 2 Jahren praktischer Erfahrung im DevOps-Bereich sowie über 6 Jahren Erfahrung in IT und Systemadministration. Fundierte Kenntnisse in Linux, Windows Server, Bash-Skripting, Python, PHP-FPM, MySQL, CI/CD sowie der Entwicklung von Full-Stack-Tools. Erfahren in der Konzeption, Entwicklung und Bereitstellung von Automatisierungs- und Monitoring-Lösungen.\n\nDerzeit erweitere ich meine Cloud-Kenntnisse durch AWS-Zertifizierungen und Weiterbildungen, mit einem starken Fokus auf Automatisierung, Infrastruktur-Optimierung und operative Effizienz. Ich beschäftige mich intensiv mit Open-Source-Projekten, halte mich über neue Technologien auf dem Laufenden und bringe mich engagiert in teamorientierte Projekte ein."
+  },
+  "experience": {
+    "heading": "Berufserfahrung",
+    "items": [
+      {
+        "id": "maritimetrainer-devops-engineer",
+        "company": "Maritimetrainer",
+        "role": "DevOps Engineer",
+        "period": "Feb. 2024 – Heute",
+        "url": "https://maritimetrainer.com/",
+        "description": [
+          "Verwaltung von Online- und Offline-Systemen einschließlich Updates, Installationen und operativem Support über mehrere Server hinweg.",
+          "Automatisierung wiederkehrender Serveraufgaben und Monitoring-Prozesse mit Bash und Python, wodurch die betriebliche Effizienz deutlich gesteigert und manuelle Fehler reduziert wurden.",
+          "Einsatz von Fachwissen in Linux, PHP-FPM und MySQL zur Sicherstellung der Systemstabilität und Optimierung der Performance.",
+          "Konzeption und Entwicklung von DevOps Lab, einem Full-Stack-Tool für automatisierte Server-Backups, Remote-Befehlsausführung und Echtzeitüberwachung von Servermetriken."
+        ],
+        "techs": [
+          "Linux",
+          "Bash",
+          "Python",
+          "PHP"
+        ]
+      },
+      {
+        "id": "niobe-hosting-support-specialist",
+        "company": "Niobe Hosting",
+        "role": "System Support Specialist",
+        "period": "2019 – 2024",
+        "url": "https://www.niobehosting.com/",
+        "description": [
+          "Umfassender technischer Support für Linux-, Windows Server-, CentOS-, Plesk-, cPanel-, DirectAdmin-, VMware-, Hyper-V-, PHP-, ASP.NET- und WordPress-Umgebungen.",
+          "Eigenständige Konzeption, Entwicklung und Bereitstellung von SizeChecker, einer Full-Stack-Lösung zur Überwachung der E-Mail-Nutzung von Reseller-Hosting-Konten. Der Windows-Dienst wurde in C# entwickelt, die Weboberfläche mit PHP, JavaScript und MySQL umgesetzt und ermöglichte die präzise Erfassung und Auswertung zuvor nicht messbarer Kennzahlen.",
+          "Ausbau von Problemlösungs-, Kommunikations- und Servermanagement-Kompetenzen durch die Bearbeitung eines hohen Supportaufkommens."
+        ],
+        "techs": [
+          "Linux",
+          "Windows",
+          "SQL",
+          "PHP",
+          "C#"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Projekte",
+    "items": [
+      {
+        "id": "devops-lab-maritimetrainer",
+        "name": "DevOps Lab @ Maritimetrainer",
+        "description": "Full-Stack-Tool zur Automatisierung und Überwachung von Offline-Servern. Frontend in JavaScript, Backend mit Django/Python und SQLite/PostgreSQL. Serverseitige Abläufe werden durch Bash-Skripte automatisiert. Für eine einfache Bereitstellung mit Docker containerisiert.",
+        "url": "https://maritimetrainer.com/",
+        "period": {
+          "display": "Juli 2025"
+        },
+        "techs": [
+          "Python",
+          "Bash",
+          "SQL",
+          "JavaScript",
+          "HTML & CSS"
+        ]
+      },
+      {
+        "id": "backlogger50",
+        "name": "BackLogger50",
+        "description": "BackLogger50 ist eine Webanwendung zur Verwaltung des persönlichen Videospiel-Backlogs und wurde mit ReactJS und PHP entwickelt.",
+        "url": "https://github.com/DevrimCaner/BackLogger50",
+        "period": {
+          "display": "Okt. 2023"
+        },
+        "techs": [
+          "JavaScript",
+          "PHP",
+          "HTML & CSS",
+          "SQL"
+        ]
+      },
+      {
+        "id": "sizechecker-niobehosting",
+        "name": "SizeChecker @ Niobehosting",
+        "description": "Entwicklung eines Full-Stack-Tools zur Berechnung der E-Mail-Nutzung von Reseller-Hosting-Benutzern – eine zuvor nicht erfassbare Kennzahl. Der Windows-Dienst wurde in C# implementiert, die Weboberfläche mit PHP, JavaScript und MySQL entwickelt. Das gesamte Projekt wurde eigenständig konzipiert, entwickelt und bereitgestellt.",
+        "url": "https://www.niobehosting.com/",
+        "period": {
+          "display": "März 2023"
+        },
+        "techs": [
+          "C#",
+          "PHP",
+          "SQL",
+          "JavaScript",
+          "HTML & CSS"
+        ]
+      },
+      {
+        "id": "ecbus-net",
+        "name": "Ecbus.net",
+        "description": "Entwicklung von Webanwendungsmodulen (Frontend mit JavaScript/jQuery, Backend mit PHP) für den Betrieb eines Busunternehmens, einschließlich der Verfolgung von Standort- und Motordaten.",
+        "period": {
+          "display": "Feb. 2021"
+        },
+        "techs": [
+          "PHP",
+          "JavaScript",
+          "HTML & CSS",
+          "SQL"
+        ]
+      },
+      {
+        "id": "personal-professional-websites",
+        "name": "Persönliche & Unternehmenswebsites",
+        "description": "Erstellung persönlicher und geschäftlicher Websites mit HTML, CSS, JavaScript und PHP (z. B. avcimakina.com.tr, eayk.org).",
+        "period": {
+          "display": "2020 – 2021"
+        },
+        "techs": [
+          "HTML & CSS",
+          "PHP",
+          "JavaScript",
+          "SQL"
+        ]
+      },
+      {
+        "id": "edge-of-coin",
+        "name": "Edge of Coin",
+        "description": "Hyper-Casual-Mobile-Spiel, entwickelt mit Unity 3D und C#.",
+        "period": {
+          "display": "Okt. 2017"
+        },
+        "techs": [
+          "Unity",
+          "C#"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Kenntnisse",
+    "items": [
+      "Linux",
+      "Bash",
+      "Python",
+      "PHP-FPM",
+      "MySQL",
+      "CI/CD",
+      "Docker",
+      "AWS",
+      "Automatisierung",
+      "Monitoring"
+    ]
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "description": "Ich freue mich jederzeit über Gespräche zu den Themen Automatisierung, Infrastruktur und einer durchdachten Softwarebereitstellung.",
+    "email": "hello@devrimcaner.com",
+    "cta": "E-Mail senden"
+  },
+  "footer": {
+    "text": "© 2026 Devrim ÖKDEM. Erstellt mit Next.js und MUI Joy.",
+    "builtWith": "Erstellt mit Next.js"
+  }
+}

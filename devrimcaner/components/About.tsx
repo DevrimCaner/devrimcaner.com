@@ -1,16 +1,17 @@
 import { Box, Typography } from '@mui/joy';
+import type { AboutData } from '../lib/portfolio';
 
 type Props = {
-  content: string;
+  data: AboutData;
 };
 
-const About = ({ content }: Props) => (
+const About = ({ data }: Props) => (
   <Box aria-labelledby="about-heading" component="section" id="about" sx={{ mb: 8 }}>
     <Typography id="about-heading" level="h2" sx={{ mb: 1 }}>
-      About
+      {data.heading}
     </Typography>
     <Typography level="body-lg" sx={{ whiteSpace: 'pre-line' }}>
-      {content}
+      {data.content}
     </Typography>
   </Box>
 );
