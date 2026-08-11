@@ -3,7 +3,7 @@ name: Verify static site
 on:
   pull_request:
   push:
-    branches: [main, dev]
+    branches: [master, dev]
 
 permissions:
   contents: read
