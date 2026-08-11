@@ -52,6 +52,8 @@ Run `npm run typecheck` and `npm run build` after content edits. The static impo
 
 ## Deployment
 
-Deploy the contents of `out/` to any static host. The custom domain is declared in `public/CNAME`, which is copied into the export. The committed top-level `docs/` directory is the existing GitHub Pages artifact; regenerate it from a successful `out/` build when publishing through that workflow.
+`out/` is deployable to any static host. The custom domain is declared in `public/CNAME`, which is copied into the export.
+
+Publishing to production happens automatically: `.github/workflows/deploy.yml` builds this project and publishes `out/` to GitHub Pages via GitHub Actions once `.github/workflows/ci.yml`'s `verify` job succeeds on `master`. No build output is committed to the repository.
 
 Static hosting cannot add application response headers. Configure CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, and frame protection in the hosting/CDN configuration.
