@@ -9,14 +9,15 @@ body {
   padding: 0;
   min-height: 100%;
   min-height: 100dvh;
-  background-color: #0a1512;
-  color: #f4f9f6;
+  --navbar-height: 56px;
+  /* Same source of truth as every component: the CSS vars Joy writes onto
+     [data-joy-color-scheme]. The literal hex is only a pre-CSS-load fallback
+     (matches the dark defaultMode in _document.tsx) so this never bypasses
+     the theme once Joy's stylesheet is in — e.g. Safari overscroll bounce. */
+  background-color: var(--joy-palette-background-body, #0a1512);
+  color: var(--joy-palette-text-primary, #f4f9f6);
   scroll-behavior: smooth;
-  scroll-padding-top: 1rem;
-}
-
-html {
-  background-color: #0a1512;
+  scroll-padding-top: calc(var(--navbar-height) + 1rem);
 }
 
 body {
