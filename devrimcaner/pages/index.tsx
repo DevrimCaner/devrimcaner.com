@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useMemo, useState } from 'react';
-import { Box, Typography } from '@mui/joy';
+import { Box } from '@mui/joy';
 import About from '../components/About';
 import Experience from '../components/Experience';
 import Navigation from '../components/Navigation';
