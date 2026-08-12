@@ -5,6 +5,7 @@ import About from '../components/About';
 import Experience from '../components/Experience';
 import Navigation from '../components/Navigation';
 import Projects from '../components/Projects';
+import Certificates from '../components/Certificates';
 import LocaleSwitcher from '../components/LocaleSwitcher';
 import { ModeToggle } from '../components/ThemeSwitcherLayout';
 import type { LocaleCode, PortfolioData } from '../lib/portfolio';
@@ -104,8 +105,16 @@ export default function Home() {
         <Box sx={{ flex: 1 }}>
           <About data={data.about} />
           <Experience heading={data.experience.heading} experience={data.experience.items} />
+          {data.certificates && (
+            <Certificates
+              certificates={data.certificates.items}
+              completedLabel={data.certificates.completedLabel}
+              heading={data.certificates.heading}
+              verifiedLabel={data.certificates.verifiedLabel}
+            />
+          )}
           <Projects heading={data.projects.heading} projects={data.projects.items} />
-          {/*          
+          {/*
             <Box component="section" id="contact" sx={{ mb: 8 }}>
               <Typography id="contact-heading" level="h2" sx={{ mb: 1 }}>
                 {data.contact.heading}

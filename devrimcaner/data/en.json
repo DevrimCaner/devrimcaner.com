@@ -158,6 +158,28 @@
       }
     ]
   },
+  "certificates": {
+    "heading": "Certificates",
+    "verifiedLabel": "Verified",
+    "completedLabel": "Completed",
+    "items": [
+      {
+        "title": "Harvard CS50x",
+        "badge": "/certificates/harvard-CS50x.png",
+        "verified": true
+      },
+      {
+        "title": "AWS Cloud Practitioner",
+        "badge": "/certificates/Cloud-Practioner.png",
+        "verified": true
+      },
+      {
+        "title": "AWS Solutions Architect Associate",
+        "badge": "/certificates/Solutions-Architect-Associate.png",
+        "verified": false
+      }
+    ]
+  },
   "skills": {
     "heading": "Skills",
     "items": [

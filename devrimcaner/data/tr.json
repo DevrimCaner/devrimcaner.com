@@ -158,6 +158,28 @@
       }
     ]
   },
+  "certificates": {
+    "heading": "Sertifikalar",
+    "verifiedLabel": "Doğrulandı",
+    "completedLabel": "Tamamlandı",
+    "items": [
+      {
+        "title": "Harvard CS50x",
+        "badge": "/certificates/placeholder.png",
+        "verified": true
+      },
+      {
+        "title": "AWS Cloud Practitioner",
+        "badge": "/certificates/placeholder.png",
+        "verified": true
+      },
+      {
+        "title": "AWS Solutions Architect Associate",
+        "badge": "/certificates/placeholder.png",
+        "verified": false
+      }
+    ]
+  },
   "skills": {
     "heading": "Yetenekler",
     "items": [

@@ -44,6 +44,12 @@ export type Experience = {
   techs: string[];
 };
 
+export type Certificate = {
+  title: string;
+  badge: string;
+  verified: boolean;
+};
+
 export type PortfolioData = {
   meta: {
     title: string;
@@ -59,6 +65,12 @@ export type PortfolioData = {
   projects: {
     heading: string;
     items: Project[];
+  };
+  certificates?: {
+    heading: string;
+    verifiedLabel: string;
+    completedLabel: string;
+    items: Certificate[];
   };
   contact: {
     heading: string;
