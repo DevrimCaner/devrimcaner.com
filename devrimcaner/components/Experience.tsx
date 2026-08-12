@@ -1,5 +1,6 @@
 import { Box, Typography, Card, Chip, Stack } from '@mui/joy';
 import { IconClock } from '@tabler/icons-react';
+import Description from './Description';
 import ExternalLink from './ExternalLink';
 import type { Experience as ExperienceItem } from '../lib/portfolio';
 
@@ -45,13 +46,7 @@ const Experience = ({ heading, experience }: Props) => (
             </Box>
           </Box>
 
-          <Box component="ul" sx={{ margin: '12px 0 0', paddingInlineStart: '20px' }}>
-            {job.description.map((item) => (
-              <Typography component="li" key={item} level="body-sm" sx={{ mb: 0.5 }}>
-                {item}
-              </Typography>
-            ))}
-          </Box>
+          <Description description={job.description} />
 
           {job.techs.length > 0 && (
             <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap' }}>
