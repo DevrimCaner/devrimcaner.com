@@ -1,9 +1,17 @@
 import { Box, CssVarsProvider, Switch, useColorScheme } from '@mui/joy';
 import { IconMoon, IconSun } from '@tabler/icons-react';
-import { useEffect, useState, type ReactNode } from 'react';
+import { useSyncExternalStore, type ReactNode } from 'react';
 import theme from '../theme/theme';
 
 const STORAGE_KEY = 'portfolio-theme';
+
+// No-op subscription: we only care about the one-time difference between the
+// server snapshot (always `false`) and the client snapshot (always `true`),
+// which forces React to re-render with the real value right after hydration
+// — without synchronously calling setState inside an effect.
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 export const ModeToggle = () => {
   const { mode, setMode } = useColorScheme();
@@ -13,11 +21,7 @@ export const ModeToggle = () => {
   // "Mui-checked" hydration mismatch — instead we render an inert, markup-
   // identical placeholder until we're mounted, then swap to the real control
   // once `mode` is guaranteed to reflect the actual stored scheme.
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMode(event.target.checked ? 'dark' : 'light');

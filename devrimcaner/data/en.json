@@ -171,11 +171,6 @@
       {
         "title": "AWS Cloud Practitioner",
         "badge": "/certificates/Cloud-Practioner.png",
-        "verified": true
-      },
-      {
-        "title": "AWS Solutions Architect Associate",
-        "badge": "/certificates/Solutions-Architect-Associate.png",
         "verified": false
       }
     ]
