@@ -11,13 +11,11 @@ import { ModeToggle } from '../components/ThemeSwitcherLayout';
 import type { LocaleCode, PortfolioData } from '../lib/portfolio';
 import enData from '../data/en.json';
 import trData from '../data/tr.json';
-import deData from '../data/de.json';
 import { site } from '../lib/site';
 
 const localeModules = {
   en: enData as PortfolioData,
   tr: trData as PortfolioData,
-  de: deData as PortfolioData,
 } as const;
 
 const STORAGE_KEY = 'portfolio-language';
@@ -28,7 +26,7 @@ const getStoredLocale = (): LocaleCode => {
   }
 
   const stored = window.localStorage.getItem(STORAGE_KEY);
-  return stored === 'en' || stored === 'tr' || stored === 'de' ? (stored as LocaleCode) : 'en';
+  return stored === 'en' || stored === 'tr' ? (stored as LocaleCode) : 'en';
 };
 
 export default function Home() {

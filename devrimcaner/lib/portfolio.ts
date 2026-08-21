@@ -1,4 +1,4 @@
-export type LocaleCode = 'en' | 'tr' | 'de';
+export type LocaleCode = 'en' | 'tr';
 
 export type SocialLinks = {
   github?: string;
