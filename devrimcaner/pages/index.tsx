@@ -7,6 +7,7 @@ import Navigation from '../components/Navigation';
 import Projects from '../components/Projects';
 import Certificates from '../components/Certificates';
 import LocaleSwitcher from '../components/LocaleSwitcher';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 import { ModeToggle } from '../components/ThemeSwitcherLayout';
 import type { LocaleCode, PortfolioData } from '../lib/portfolio';
 import enData from '../data/en.json';
@@ -127,6 +128,8 @@ export default function Home() {
           */}
         </Box>
       </Box>
+
+      <ScrollToTopButton />
     </>
   );
 }

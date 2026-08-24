@@ -23,8 +23,15 @@ const theme = extendTheme({
           surface: '#0f1e19',
         },
         primary: {
+          // Joy derives every unset state (hover/active/soft/...) from this
+          // numeric 50-900 scale via CSS vars — e.g. solidActiveBg resolves to
+          // var(--joy-palette-primary-700). Without this, that fallback was
+          // Joy's own default blue scale, which is what flashed blue on press
+          // even though solidBg/solidHoverBg below were already green.
+          ...neonGreen,
           solidBg: neonGreen[500],
           solidHoverBg: neonGreen[400],
+          solidActiveBg: neonGreen[600],
           plainColor: neonGreen[500], // link will pick this
           outlinedBorder: neonGreen[500],
         },
@@ -32,6 +39,11 @@ const theme = extendTheme({
           softBg: '#102e24',
           softColor: neonGreen[100],
         },
+        // Same fallback issue as primary-700 above: unset, this defaults to
+        // Joy's own primary-500 (blue), so every default focus ring —
+        // including IconButton's built-in :focus-visible outline — flashed
+        // blue instead of theme green.
+        focusVisible: neonGreen[500],
       },
     },
     light: {
@@ -41,8 +53,10 @@ const theme = extendTheme({
           surface: '#fff',
         },
         primary: {
+          ...neonGreen,
           solidBg: neonGreen[700],
           solidHoverBg: neonGreen[100],
+          solidActiveBg: neonGreen[800],
           plainColor: neonGreen[800], // light: darker green for links/text
           outlinedBorder: neonGreen[500],
         },
@@ -50,6 +64,7 @@ const theme = extendTheme({
           softBg: neonGreen[50],
           softColor: neonGreen[800],
         },
+        focusVisible: neonGreen[600],
       },
     },
   },
