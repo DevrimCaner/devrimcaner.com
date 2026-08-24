@@ -21,7 +21,7 @@
   },
   "about": {
     "heading": "Hakkımda",
-    "content": "Teknolojiyle tanışmam erken yaşta oldu — oyunlar ve bilgisayarlar, ben bunu bir kariyer olarak görmeye başlamadan çok önce beni içine çekmişti. O merak, zamanla şu an yürüdüğüm yola dönüştü.\n\nProfesyonel olarak Niobe Hosting'de Sistem Destek Uzmanı olarak başladım ve beş yıl boyunca Linux, Windows Server ve hosting altyapısının içinde, her an bir şeylerin bozulabileceği türden, başka hiçbir yerde bu kadar kolay edinilemeyecek bir deneyim kazandım. İlk gerçek anlamda kendi geliştirdiğim aracı da orada, şirketin sistemlerinde kimsenin çözmeye vakit bulamadığı bir eksikliği fark edince ortaya çıkardım: SizeChecker.\n\nBugün Maritimetrainer'da DevOps Mühendisi olarak çalışıyor, gemiler üzerinde bulunan ve internet bağlantısına tam olarak güvenilemeyen sunucular dahil bir sunucu filosuna göz kulak oluyorum. Beni en çok tatmin eden şey sadece otomasyon script'leri yazmak değil; bir sistemi baştan sona anlamak — nasıl mimarlendiği, nasıl güvence altına alındığı, nasıl barındırıldığı ve bir şeyler ters gittiğinde ne olacağı. DevSecOps alanında uzmanlaşmaya çalışmamın bir nedeni de bu: bir şeyler inşa etmeye devam etmek istiyorum, ama güvenliği sonradan eklemek yerine mimariye baştan gömerek.\n\nŞu anda kendi projelerim üzerinden — bunlardan biri de yan projem olarak geliştirdiğim bir borsa simülasyon platformu — cloud-native becerilerimi (AWS, Kubernetes, Terraform) derinleştiriyorum. İş dışında finans ve trading dünyasını takip ediyor, oyun tasarımıyla uğraşıyor, spor salonunda vakit geçiriyor ve ara sıra öğrendiğim bir konu hakkında YouTube videosu çekiyorum. Ayrıca Almancamı geliştiriyor, İngilizcemi de bir Speaking Club'da canlı tutuyorum.\n\n2,5+ yılı doğrudan DevOps rolünde olmak üzere, sistem yönetimi ve DevOps alanında toplamda 7+ yıllık deneyime sahibim."
+    "content": "Teknolojiyle tanışmam erken yaşlarda oldu; oyunlar ve bilgisayarlar, bunu bir kariyer olarak görmeden çok önce merakımı tetikledi. Zamanla bu merak, sistemlerin nasıl çalıştığını anlama, onları geliştirme ve teknolojiyi gerçek problemlere çözüm üretmek için kullanma tutkusuna dönüştü.\n\nBeni en çok motive eden şey, sistemlere bir bütün olarak yaklaşmak; mimarisini, otomasyon süreçlerini, güvenlik tarafını ve güvenilir şekilde çalışmasını sağlayan detayları anlamak. Bu bakış açısı, DevSecOps alanına olan ilgimin de temelini oluşturuyor: güvenliğin sonradan eklenen bir unsur değil, sistemin en başından itibaren tasarımın bir parçası olduğu çözümler geliştirmek istiyorum.\n\nŞu anda AWS, Kubernetes ve Terraform gibi teknolojiler üzerinde çalışarak cloud-native yetkinliklerimi geliştiriyorum. Kişisel projelerimden biri olan hisse senedi simülasyon platformu üzerinde çalışırken ölçeklenebilir mimariler ve modern mühendislik yaklaşımları konusunda kendimi geliştirmeye devam ediyorum.\n\nTeknoloji dışında finans ve yatırım dünyasını takip ediyor, oyun tasarımıyla ilgileniyor, spor yaparak kendimi geliştirmeye devam ediyor ve öğrendiklerimi zaman zaman YouTube içerikleriyle paylaşıyorum. Ayrıca Almancamı geliştirirken, yerel bir Speaking Club aracılığıyla İngilizcemi aktif tutmaya çalışıyorum.\n\nBenim için iyi mühendislik; merak etmek, sürekli öğrenmek ve karmaşık problemleri güvenilir, güvenli ve anlamlı çözümlere dönüştürebilme becerisidir."
   },
   "experience": {
     "heading": "Deneyim",
@@ -30,13 +30,13 @@
         "id": "maritimetrainer-devops-engineer",
         "company": "Maritimetrainer",
         "role": "DevOps Mühendisi",
-        "period": "Şub 2024 - Halen",
+        "period": "Şub 2024 - Eyl 2026",
         "url": "https://maritimetrainer.com/",
         "description": [
-          "Hem sürekli çevrimiçi olan sistemler hem de bağlantısı ne zaman kesileceği kestirilemeyen gemi üzerindeki sunuculardan oluşan dağıtık bir filoda güncelleme, bakım ve operasyonel destek süreçlerini yönetiyorum.",
-          "Sürekli karşılaştığım bir sorun vardı: standart yedekleme otomasyonumuz, aniden çevrimdışı kalabilen sunucular için işe yaramıyordu ve bu durum eğitim verilerini gerçek bir risk altına sokuyordu. Bu boşluğu kapatmak için DevOps Lab'ı geliştirdim; zamanla 400'den fazla sunucu için otomatik yedekleme ve gerçek zamanlı izleme yapan tam kapsamlı bir platforma dönüştü.",
-          "Günlük olarak, tekrar eden bakım ve izleme görevlerini Bash ve Python ile otomatikleştiriyor; sistemleri kararlı ve performanslı tutmak için Linux, PHP-FPM ve MySQL bilgimden yararlanıyorum.",
-          "Ayrıca diğer mühendislik ekiplerine Git konusunda destek veriyorum (Unreal Engine ile çalışan bir ekip için Git LFS dahil), tekrarlayan süreçleri dokümante ederek ekibin tek bir kişiye bağımlı kalmamasını sağlıyor, denetimler öncesinde ISO 27001 dokümantasyonumuzu gözden geçiriyor ve şirket genelinde uç nokta güvenliği ile DLP araçlarını takip ediyorum."
+          "Dağıtık bir sunucu altyapısındaki güncelleme, bakım ve operasyonel destek süreçlerini yönettim — buna hem sürekli çevrimiçi çalışan sistemler hem de bağlantı sürekliliği her zaman öngörülemeyen gemi üzerindeki sunucular dahildi.",
+          "Karşılaşılan tekrarlayan sorunlardan biri, standart yedekleme otomasyonunun beklenmedik şekilde çevrimdışı kalabilen sunucular için yeterli olmaması ve bunun eğitim verilerini riske atmasıydı. Bu sorunu çözmek için DevOps Lab'i geliştirdim — zamanla 400'den fazla sunucu için otomatik yedekleme ve gerçek zamanlı izleme süreçlerini yöneten tam kapsamlı bir platform haline geldi.",
+          "Bash ve Python kullanarak tekrarlayan bakım ve izleme görevlerini otomatikleştirdim; Linux, PHP-FPM ve MySQL konularındaki deneyimimi kullanarak sistemlerin kararlılığını ve performansını korumaya katkı sağladım.",
+          "Ayrıca Unreal Engine ile çalışan ekipler için Git LFS dahil olmak üzere Git süreçlerinde mühendislik ekiplerine destek oldum, kişisel bilgi bağımlılığını azaltmak amacıyla tekrar eden prosedürleri dokümante ettim, ISO 27001 denetim hazırlıklarına katkıda bulundum ve şirket genelindeki uç nokta güvenliği ile DLP çözümlerini takip ettim."
         ],
         "techs": ["Linux", "Bash", "Python", "Django", "PostgreSQL", "Docker"]
       },
@@ -48,9 +48,9 @@
         "url": "https://www.niobehosting.com/",
         "description": [
           "Beş yıl boyunca, hızlı tempolu, vardiyalı bir rolde Linux, Windows Server, CentOS, Plesk, cPanel, DirectAdmin, VMware, Hyper-V, PHP, ASP.NET ve WordPress ortamlarında teknik destek sağladım.",
-          "Şirketin eski mail kullanım takip aracı bir altyapı değişikliğinden sonra bozulmuş ve 2-3 yıl boyunca çalışmaz halde kalmıştı. Kimse düzeltmeyi başaramamıştı, bu yüzden sıfırdan bir alternatif geliştirdim — SizeChecker; bir C# Windows Service ile PHP/JavaScript/MySQL tabanlı bir arayüzü bir araya getiren bu araç, reseller mail kullanımını ilk kez tekrar ölçülebilir hale getirdi.",
+          "Şirketin eski mail kullanım takip aracı bir altyapı değişikliğinden sonra bozulmuş ve 2-3 yıl boyunca çalışmaz halde kalmıştı. Düzeltmesi mümkün olmamıştı, bu yüzden sıfırdan bir alternatif geliştirdim — SizeChecker; bir C# Windows Service ile PHP/JavaScript/MySQL tabanlı bir arayüzü bir araya getiren bu araç, reseller mail kullanımını ilk kez tekrar ölçülebilir hale getirdi.",
           "Bu proje sadece teknik bir açığı kapatmakla kalmadı: ortaya çıkardığı gerçek kullanım verileri, şirketin yeni bir 1TB paket katmanı sunmasına yol açtı ve 20'den fazla reseller planını yükseltti.",
-          "Gün be gün yoğun sayıda destek talebiyle uğraşmak, problem çözme, iletişim ve sunucu yönetimi becerilerimi hiçbir sınıf ortamının veremeyeceği kadar geliştirdi."
+          "Gün be gün yoğun sayıda destek talebiyle uğraşmak, problem çözme, iletişim ve sunucu yönetimi becerilerimi geliştirdim."
         ],
         "techs": ["Linux", "Windows Server", "C#", "PHP", "MySQL"]
       }
@@ -62,7 +62,13 @@
       {
         "id": "devops-lab-maritimetrainer",
         "name": "DevOps Lab @ Maritimetrainer",
-        "description": "Gemi üzerindeki eğitim sunucularının interneti nadiren güvenilirdi, bu yüzden her zaman çevrimiçi olan sistemlerimiz için işe yarayan standart yedekleme otomasyonu burada işe yaramıyordu — yedeklemeler sessizce başarısız oluyor, tek bir donanım arızası kalıcı veri kaybı anlamına gelebiliyordu. Bunu çözmeye karar verdim.\n\nİşe küçük başladı: CSV dosyalarında tutulan verileri okuyup yedekleyen bir Python script'i (başlangıçta sadece 'autobackup' olarak adlandırılmıştı). İhtiyaç büyüdükçe daha yönetilebilir olması için SQLite ve Flask'a taşıdım, sonunda daha temiz bir MVC yapısı ve daha iyi I/O performansı için Django ve PostgreSQL üzerinde yeniden inşa ettim. Basit bir yedekleme script'i olarak başlayan şey, dokunduğu her sunucudan disk kullanımı ve bakım durumu gibi gerçek zamanlı telemetri verisi de çeken tam kapsamlı bir platforma dönüştü.\n\nÖzel bir ağın arkasında YubiKey iki faktörlü kimlik doğrulamasıyla güvence altına alınmış durumda ve bugün 400'den fazla gemi üzerindeki sunucu için yedekleme ve izleme yönetiyor. Bu süreçte Bash ile uzak sunucu operasyonlarında, bir uygulamayı Docker ile konteynerleştirmede, farklı Python framework'leriyle çalışmada ve production ortamında PostgreSQL işletmede gerçek bir derinlik kazandım.",
+        "description": [
+          "Gemi üzerindeki eğitim sunucularında genellikle güvenilir bir internet bağlantısı bulunmuyordu; bu nedenle sürekli çevrimiçi sistemlerimiz için sorunsuz çalışan standart yedekleme otomasyonu bu ortamlar için uygun değildi. Bu problemi çözmek için çalışmaya başladım.",
+          "Proje küçük bir Python scripti ile başladı: CSV dosyalarında saklanan verileri okuyup yedekleyen basit bir yapıydı (ilk adıyla sadece 'autobackup'). İhtiyaçlar arttıkça daha yönetilebilir bir yapı için SQLite ve Flask kullanımına geçtim; sonrasında ise daha temiz bir MVC mimarisi ve daha iyi I/O performansı elde etmek amacıyla sistemi Django ve PostgreSQL üzerine yeniden geliştirdim.",
+          "Basit bir yedekleme scripti olarak başlayan proje, zamanla dokunduğu her sunucudan gerçek zamanlı telemetri verileri — disk kullanımı ve bakım durumu gibi bilgiler — toplayabilen kapsamlı bir platforma dönüştü.",
+          "Platform, özel bir ağ yapısı ve YubiKey iki faktörlü kimlik doğrulama ile güvence altına alındı; 400'den fazla gemi üzerindeki sunucunun yedekleme ve izleme süreçlerini yönetir hale geldi.",
+          "Bu süreç boyunca Bash ile uzak sunucu operasyonları konusunda derinlemesine deneyim kazandım, Docker ile uygulama konteynerleştirme süreçlerinde çalıştım, farklı Python frameworkleri üzerinde geliştirme yaptım ve PostgreSQL'i üretim ortamında yönettim."
+        ],
         "url": "https://maritimetrainer.com/",
         "period": { "display": "2025" },
         "techs": ["Python", "Django", "Flask", "PostgreSQL", "Docker", "Bash"]
@@ -70,7 +76,13 @@
       {
         "id": "sizechecker-niobehosting",
         "name": "SizeChecker @ Niobe Hosting",
-        "description": "Niobe Hosting'in mail sunucuları IceWarp üzerinde çalışıyordu ve reseller mail kullanımını takip eden araç, bir altyapı değişikliğinin ardından 2-3 yıldır bozuktu — kimse yeniden çalışır hale getirememişti. Bunu kendim düzeltmeye karar verdim: kullanım verisini doğrudan çeken bir C# Windows Service ve bunu görüntüleyen bir PHP/JavaScript/MySQL arayüzü geliştirdim.\n\nEn zorlu kısım güvenilirlikti: servisin bir sunucu yeniden başlatmasından sağ çıkıp gözetimsiz çalışmaya devam etmesini sağlamak. Yayına alındıktan sonra etkisi teknik düzeltmenin ötesine geçti — ortaya çıkardığı kullanım verisi bazı müşterilerin mevcut hiçbir paketin izin vermediği kadar fazla kullanım yaptığını gösterdi ve bu da şirketin yeni bir 1TB paket katmanı sunmasına yol açtı. 20'den fazla reseller planını yükseltti. Kendi geliştirdiğin bir aracın sadece teknik bir sorunu çözmekle kalmayıp gerçek bir iş etkisi de yaratabileceğine dair güzel bir erken derstin.",
+        "description": [
+          "Niobe Hosting'in mail sunucuları IceWarp üzerinde çalışıyordu ve reseller mail kullanımını takip eden araç, bir altyapı değişikliğinin ardından 2-3 yıldır bozuktu — kimse yeniden çalışır hale getirememişti.",
+          "Bunu kendim düzeltmeye karar verdim: kullanım verisini doğrudan çeken bir C# Windows Service ve bunu görüntüleyen bir PHP/JavaScript/MySQL arayüzü geliştirdim.",
+          "Güvenilirlik zorlu kısımlardan biriydi, servisin bir sunucu yeniden başlatmasından sonra sorunsuz çalışmasını sağlamak gerekiyordu.",
+          "Yayına alındıktan sonra etkisi teknik düzeltmenin ötesine geçti — ortaya çıkardığı kullanım verisi bazı müşterilerin mevcut hiçbir paketin izin vermediği kadar fazla kullanım yaptığını gösterdi ve bu da şirketin yeni bir 1TB paket katmanı sunmasına yol açtı. 20'den fazla reseller planını yükseltti.",
+          "Kendi geliştirdiğin bir aracın sadece teknik bir sorunu çözmekle kalmayıp gerçek bir iş etkisi de yaratabileceğine dair güzel bir projeydi."
+        ],
         "url": "https://www.niobehosting.com/",
         "period": { "display": "Mar 2023" },
         "techs": ["C#", "Windows Services", "PHP", "JavaScript", "MySQL"]
@@ -78,7 +90,10 @@
       {
         "id": "backlogger50",
         "name": "BackLogger50",
-        "description": "Harvard'ın CS50x dersi için bitirme projem. Sona kadar motivasyonumu korumak için kendi ilgi alanlarıma yakın bir şey seçmek istedim ve sahip olunan, bitirilen ve hâlâ bekleyen oyunları takip eden bir web uygulaması geliştirdim.\n\nModern ve talep gören bir framework'te gerçek anlamda deneyim kazanmak için Vue ya da Angular yerine bilinçli olarak ReactJS'i seçtim; bunu kolayca barındırabileceğim bir PHP backend ile eşleştirdim. Oyun verileri IGDB API'sinden (Twitch/Amazon) geliyor. React ve üçüncü taraf API'lerle çalışma konusunda sağlam bir hızlandırılmış kurs oldu.",
+        "description": [
+          "Harvard'ın CS50x dersi için bitirme projem. Sona kadar motivasyonumu korumak için kendi ilgi alanlarıma yakın bir şey seçmek istedim. Sahip olunan, bitirilen ve hâlâ bekleyen oyunları takip eden bir web uygulaması geliştirdim.",
+          "Modern ve talep gören bir framework'te gerçek anlamda deneyim kazanmak için Vue ya da Angular yerine bilinçli olarak ReactJS'i seçtim; bunu kolayca barındırabileceğim bir PHP backend ile eşleştirdim. Oyun verileri ise IGDB API'sinden (Twitch/Amazon) geliyor."
+        ],
         "url": "https://github.com/DevrimCaner/BackLogger50",
         "period": { "display": "Eki 2023" },
         "techs": ["ReactJS", "PHP", "MySQL", "IGDB API"]
@@ -86,21 +101,25 @@
       {
         "id": "ecbus-net",
         "name": "Ecbus.net",
-        "description": "Bir takım arkadaşımla birlikte geliştirdiğimiz bir otobüs takip ve yönetim sistemi — tipik bir CMS projesinden ziyade gerçek bir operasyonel araca daha yakın. İkimiz de PHP'yi iyi biliyorduk ve barındırmayı kolaylaştırdığı için onun üzerine, frontend'de de JavaScript kullanarak inşa ettik. Takım arkadaşım otobüs üzerindeki yazılımı üstlendi; ben backend veri işleme ve harita tabanlı görüntüleme üzerinde çalıştım, doğru konum takibi için Google Maps araçlarından yararlandım.\n\nEn zorlu problemlerden biri kod değil geometriydi: bir otobüsün canlı konumunun bir kullanıcının harita üzerinde çizdiği bir şeklin içine düşüp düşmediğini belirlemek. Sistem sonunda iki otobüs şirketinde, yaklaşık 70 araçta kullanıma girdi.",
+        "description": [
+          "Bir takım arkadaşımla birlikte geliştirdiğimiz bir otobüs takip ve yönetim sistemi — tipik bir CMS projesinden ziyade gerçek bir operasyonel araca daha yakındı.",
+          "İkimiz de PHP'yi iyi biliyorduk ve barındırmayı kolaylaştırdığı için onun üzerine, frontend'de de JavaScript kullanarak inşa ettik. Takım arkadaşım otobüs üzerindeki yazılımı üstlendi, ben de backend veri işleme ve harita tabanlı görüntüleme üzerinde çalıştım. Doğru konum takibi için Google Maps araçlarından yararlanılı.",
+          "En zorlu problemlerden biri kod değil geometriydi: bir otobüsün canlı konumunun bir kullanıcının harita üzerinde çizdiği bir şeklin içine düşüp düşmediğini belirlenmesi gerekiyordu. Sistem sonunda iki otobüs şirketinde, yaklaşık 70 araçta kullanıma girdi."
+        ],
         "period": { "display": "Şub 2021" },
         "techs": ["PHP", "JavaScript", "MySQL", "Google Maps API"]
       },
       {
         "id": "personal-professional-websites",
         "name": "Kişisel & Profesyonel Web Siteleri",
-        "description": "Müşterilerle doğrudan konuşup gerçekte neye ihtiyaç duyduklarını belirleyip inşa ettiğim bir dizi freelance çalışma — genellikle uygun maliyetli barındırmayı kolaylaştırdığı için PHP ve MySQL ile. Gösterişli değil, basit ve pratik, içerik yönetimli siteler. PHP ve JavaScript becerilerimi gerçek anlamda derinleştirdiğim dönem oldu; avcimakina.com.tr ve eayk.org bu çalışmalar arasında.",
+        "description": "Genellikle PHP ve MySQL kullanarak, uygun fiyatlı ve kolay barındırılabilen platformlarda freelance işler yürüttüm. Gösterişli siteler yerine, basit ve pratik içerik yönetimli siteler tasarladım. Bunlara, \"avcimakina.com.tr\" ve \"eayk.org\" gibi siteler de dahildi, PHP ve JavaScript becerilerimi bu projelerle bir üst noktaya taşıdım.",
         "period": { "display": "2020 - 2021" },
         "techs": ["PHP", "MySQL", "JavaScript", "HTML & CSS"]
       },
       {
         "id": "edge-of-coin",
         "name": "Edge of Coin",
-        "description": "İlk denemem ve ilk tam anlamıyla yayımlanan uygulamam — ona hâlâ ayrı bir yerim var. O dönem eğlenceli ve biraz farklı bulduğum basit bir oyun fikrinden doğdu, mobil uyumluluk için Unity ile geliştirildi. Android 2017'den bu yana çok değişti ve artık pek oynanabilir değil, ama gerçek bir ürünü inşa etmek, bir mağazaya yayımlamak ve versiyonlamak bana o zamandan beri işime yarayan çok şey öğretti.",
+        "description": "İlk tam anlamıyla yayımlanan uygulamam — ona hâlâ ayrı bir yerim var. O dönem eğlenceli ve biraz farklı bulduğum basit bir oyun fikrinden doğdu, mobil uyumluluk için Unity ile geliştirildi. Android 2017'den bu yana çok değişti ve artık pek oynanabilir değil, ama gerçek bir ürünü inşa etmek, bir mağazaya yayımlamak ve versiyonlamak bana o zamandan beri işime yarayan çok şey öğretti.",
         "period": { "display": "Eki 2017" },
         "techs": ["Unity", "C#"]
       }
@@ -155,15 +174,5 @@
       "Yapay zeka destekli geliştirme (Claude, ChatGPT, agentic iş akışları)",
       "Yerel LLM dağıtımı (Qwen, DeepSeek)"
     ]
-  },
-  "contact": {
-    "heading": "İletişim",
-    "description": "Otomasyon, altyapı ya da genel olarak DevOps üzerine konuşmaya her zaman açığım — çekinmeden ulaşabilirsiniz.",
-    "email": "hello@devrimcaner.com",
-    "cta": "Bana e-posta gönder"
-  },
-  "footer": {
-    "text": "© 2026 Devrim ÖKDEM. Next.js ile geliştirilmiştir.",
-    "builtWith": "Next.js ile geliştirilmiştir"
   }
 }

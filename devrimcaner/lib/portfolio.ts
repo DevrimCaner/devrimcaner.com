@@ -72,14 +72,4 @@ export type PortfolioData = {
     completedLabel: string;
     items: Certificate[];
   };
-  contact: {
-    heading: string;
-    description: string;
-    email: string;
-    cta: string;
-  };
-  footer?: {
-    text: string;
-    builtWith: string;
-  };
 };

@@ -21,7 +21,7 @@
   },
   "about": {
     "heading": "About",
-    "content": "I got into technology early — games and computers pulled me in long before I thought of it as a career, and that curiosity eventually turned into the path I'm on now.\n\nI started professionally at Niobe Hosting as a System Support Specialist, where I spent five years deep in Linux, Windows Server, and hosting infrastructure — the kind of hands-on, something's-always-breaking experience that's hard to get anywhere else. That's also where I built my first real-world tool, SizeChecker, after noticing a gap in the company's systems that nobody had gotten around to fixing.\n\nToday I work as a DevOps Engineer at Maritimetrainer, where I look after a fleet of servers — including ones sitting on ships with connectivity nobody can fully rely on. What I enjoy most isn't just writing the automation scripts; it's understanding a system end to end — how it's architected, how it's secured, how it's hosted, and what happens when something breaks. That's part of why I'm working toward specializing in DevSecOps: I want to keep building things, but with security built into the architecture rather than bolted on afterward.\n\nI'm currently deepening my cloud-native skills — AWS, Kubernetes, Terraform — through my own projects, including a stock-market simulation platform I'm building on the side. Outside of work, I follow the finance and trading world, tinker with game design, spend time in the gym, and occasionally put together a YouTube video about whatever I've been learning. I'm also working on my German while keeping my English sharp at a local Speaking Club.\n\nI have 7+ years of combined system administration and DevOps experience, including 2.5+ years in a dedicated DevOps role."
+    "content": "I got into technology early; games and computers sparked my curiosity long before I saw it as a career. Over time, that curiosity turned into a passion for understanding how systems work, how they can be improved, and how technology can solve real problems. \n\nWhat I enjoy most is looking at systems from end to end — understanding their architecture, automation, security, and the challenges that come with keeping them reliable. This mindset is what drives my interest in DevSecOps: building solutions where security is part of the foundation, not something added later. \n\nI’m currently expanding my cloud-native skills through hands-on projects involving AWS, Kubernetes, and Terraform. One of my personal projects is a stock-market simulation platform, where I explore scalable architectures and modern engineering practices. \n\nOutside of technology, I follow finance and trading, experiment with game design, stay active through fitness, and occasionally share what I learn through YouTube content. I’m also continuing to improve my communication skills by developing my German and maintaining my English through a local Speaking Club. \n\nI believe great engineering comes from curiosity, continuous learning, and the ability to turn complex challenges into reliable, secure, and meaningful solutions."
   },
   "experience": {
     "heading": "Experience",
@@ -30,13 +30,13 @@
         "id": "maritimetrainer-devops-engineer",
         "company": "Maritimetrainer",
         "role": "DevOps Engineer",
-        "period": "Feb 2024 - Present",
+        "period": "Feb 2024 - Sep 2026",
         "url": "https://maritimetrainer.com/",
         "description": [
-          "I manage updates, maintenance, and operational support across a distributed fleet of servers — both always-online systems and ship-based servers that run on connectivity nobody can fully predict.",
-          "One gap kept coming up: our standard backup automation just didn't work for servers that could go offline unpredictably, which put training data at real risk. I built DevOps Lab to close that gap — it's grown into a full-stack platform now handling automated backups and real-time monitoring for 400+ servers.",
-          "Day to day, I automate recurring maintenance and monitoring tasks with Bash and Python, and lean on Linux, PHP-FPM, and MySQL expertise to keep systems stable and performant.",
-          "I also support other engineering teams with Git (including Git LFS for a team working in Unreal Engine), document recurring procedures so the team isn't dependent on any one person, review our ISO 27001 documentation ahead of audits, and keep an eye on endpoint security and DLP tooling across the company."
+          "I managed updates, maintenance, and operational support across a distributed fleet of servers — including both always-online systems and ship-based servers running on connectivity that could not always be predicted.",
+          "One recurring challenge was that the standard backup automation was not suitable for servers that could go offline unexpectedly, putting training data at risk. To address this, I built DevOps Lab — a full-stack platform that evolved to handle automated backups and real-time monitoring for 400+ servers.",
+          "I automated recurring maintenance and monitoring tasks using Bash and Python, while leveraging my experience with Linux, PHP-FPM, and MySQL to help maintain system stability and performance.",
+          "I also supported engineering teams with Git workflows, including Git LFS for teams working with Unreal Engine, documented recurring procedures to reduce dependency on individual knowledge, contributed to ISO 27001 audit preparation, and monitored endpoint security and DLP solutions across the company."
         ],
         "techs": ["Linux", "Bash", "Python", "Django", "PostgreSQL", "Docker"]
       },
@@ -48,9 +48,9 @@
         "url": "https://www.niobehosting.com/",
         "description": [
           "For five years, in a fast-paced, shift-based role, I provided technical support across Linux, Windows Server, CentOS, Plesk, cPanel, DirectAdmin, VMware, Hyper-V, PHP, ASP.NET, and WordPress environments.",
-          "The company's old mail-usage tracking tool broke after an infrastructure change and stayed broken for 2-3 years. Nobody had been able to fix it, so I built a replacement from scratch — SizeChecker, a C# Windows Service paired with a PHP/JavaScript/MySQL interface — that made reseller mail usage measurable again for the first time.",
+          "The company's old mail-usage tracking tool broke after an infrastructure change and stayed broken for 2-3 years. It was not possible to fix it, so I built a replacement from scratch — SizeChecker, a C# Windows Service paired with a PHP/JavaScript/MySQL interface — that made reseller mail usage measurable again for the first time.",
           "That project ended up doing more than closing a technical gap: it surfaced real usage data that led the company to introduce a new 1TB service tier, and more than 20 resellers upgraded their plans as a result.",
-          "Handling a high volume of support requests day in and day out sharpened my problem-solving, communication, and server management skills more than any classroom could have."
+          "Handling a high volume of support requests day in and day out sharpened my problem-solving, communication, and server management skills."
         ],
         "techs": ["Linux", "Windows Server", "C#", "PHP", "MySQL"]
       }
@@ -62,7 +62,13 @@
       {
         "id": "devops-lab-maritimetrainer",
         "name": "DevOps Lab @ Maritimetrainer",
-        "description": "Ship-based training servers rarely have reliable internet, so the standard backup automation that worked fine for our always-online systems just didn't apply — backups silently failed, and a single hardware failure could mean permanent data loss. I set out to fix that.\n\nIt started small: a Python script reading and backing up data stored in CSV files (originally just called 'autobackup'). As the need grew, I moved it to SQLite with Flask for something more manageable, and eventually rebuilt it on Django with PostgreSQL for a cleaner MVC structure and better I/O performance. What began as a simple backup script grew into a full platform that also pulls real-time telemetry — disk usage, maintenance status — from every server it touches.\n\nIt's secured behind a private network with YubiKey two-factor authentication, and today it manages backups and monitoring for 400+ ship-based servers. Along the way I picked up real depth in remote server operations with Bash, containerizing an application with Docker, working across Python frameworks, and running PostgreSQL in production.",
+        "description": [
+          "Ship-based training servers rarely have reliable internet, so the standard backup automation that worked fine for our always-online systems just didn't apply. So I set out to fix that.",
+          "It started small: a Python script reading and backing up data stored in CSV files (originally just called 'autobackup'). As the need grew, I moved it to SQLite with Flask for something more manageable, and eventually rebuilt it on Django with PostgreSQL for a cleaner MVC structure and better I/O performance.",
+          "What began as a simple backup script grew into a full platform that also pulls real-time telemetry — disk usage, maintenance status — from every server it touches.",
+          "It's secured behind a private network with YubiKey two-factor authentication, and manages backups and monitoring for 400+ ship-based servers.",
+          "Along the way I picked up real depth in remote server operations with Bash, containerizing an application with Docker, working across Python frameworks, and running PostgreSQL in production."
+        ],
         "url": "https://maritimetrainer.com/",
         "period": { "display": "2025" },
         "techs": ["Python", "Django", "Flask", "PostgreSQL", "Docker", "Bash"]
@@ -70,7 +76,13 @@
       {
         "id": "sizechecker-niobehosting",
         "name": "SizeChecker @ Niobe Hosting",
-        "description": "Niobe Hosting's mail servers ran on IceWarp, and the tool that used to track reseller mail usage had been broken for 2-3 years after an infrastructure change — nobody had managed to get it working again. I decided to fix it myself, building a C# Windows Service to pull usage data directly and a PHP/JavaScript/MySQL interface to display it.\n\nThe trickiest part was reliability: making sure the service would survive a server restart and keep running unattended. Once it was live, the impact went beyond the technical fix — the usage data it surfaced showed some customers using far more than any existing package allowed, which led the company to introduce a new 1TB service tier. More than 20 resellers ended up upgrading their plans. It was a good early lesson in how a self-built tool can create real business impact, not just solve a technical problem.",
+        "description": [
+          "Niobe Hosting's mail servers ran on IceWarp, and the tool that used to track reseller mail usage had been broken for 2-3 years after an infrastructure change — nobody had managed to get it working again.",
+          "I decided to fix it myself, building a C# Windows Service to pull usage data directly and a PHP/JavaScript/MySQL interface to display it.",
+          "The trickiest part was reliability: making sure the service would survive a server restart and keep running unattended.",
+          "Once it was live, the impact went beyond the technical fix — the usage data it surfaced showed some customers using far more than any existing package allowed, which led the company to introduce a new 1TB service tier. More than 20 resellers ended up upgrading their plans.",
+          "It was a good early lesson in how a self-built tool can create real business impact, not just solve a technical problem."
+        ],
         "url": "https://www.niobehosting.com/",
         "period": { "display": "Mar 2023" },
         "techs": ["C#", "Windows Services", "PHP", "JavaScript", "MySQL"]
@@ -78,7 +90,10 @@
       {
         "id": "backlogger50",
         "name": "BackLogger50",
-        "description": "My capstone project for Harvard's CS50x. I wanted something close to my own interests to stay motivated through to the finish line, so I built a web app for tracking a video game backlog — what you own, what you've finished, and what's still waiting.\n\nI picked ReactJS over Vue or Angular specifically to get real hands-on time with a modern, in-demand framework, paired with a PHP backend I could host easily. Game data comes from the IGDB API (Twitch/Amazon). It was a solid crash course in React and working with third-party APIs.",
+        "description": [
+          "My capstone project for Harvard's CS50x. I wanted something close to my own interests to stay motivated through to the finish line, so I built a web app for tracking a video game backlog — what you own, what you've finished, and what's still waiting.",
+          "I picked ReactJS over Vue or Angular specifically to get real hands-on time with a modern, in-demand framework, paired with a PHP backend I could host easily. Game data comes from the IGDB API (Twitch/Amazon)"
+        ],
         "url": "https://github.com/DevrimCaner/BackLogger50",
         "period": { "display": "Oct 2023" },
         "techs": ["ReactJS", "PHP", "MySQL", "IGDB API"]
@@ -86,14 +101,18 @@
       {
         "id": "ecbus-net",
         "name": "Ecbus.net",
-        "description": "A bus tracking and management system, built with a teammate — a step up from a typical CMS-style project, closer to a real operational tool. We both knew PHP well and it made hosting simple, so that's what we built on, with JavaScript on the frontend. My teammate handled the on-bus software; I worked on the backend data processing and the map-based display, pulling in Google Maps tooling for accurate location tracking.\n\nOne of the trickier problems was geometry, not code: figuring out whether a bus's live position fell inside a shape a user had drawn on the map. The system ended up in use by two bus companies across nearly 70 vehicles.",
+        "description": [
+          "A bus tracking and management system, built with a teammate — a step up from a typical CMS-style project, closer to a real operational tool.",
+          "We both knew PHP well and it made hosting simple, so that's what we built on, with JavaScript on the frontend. My teammate handled the on-bus software; I worked on the backend data processing and the map-based display, pulling in Google Maps tooling for accurate location tracking.",
+          "One of the trickier problems was geometry, not code: figuring out whether a bus's live position fell inside a shape a user had drawn on the map. The system ended up in use by two bus companies across nearly 70 vehicles."
+        ],
         "period": { "display": "Feb 2021" },
         "techs": ["PHP", "JavaScript", "MySQL", "Google Maps API"]
       },
       {
         "id": "personal-professional-websites",
         "name": "Personal & Professional Websites",
-        "description": "A run of freelance work where I'd talk directly with clients, figure out what they actually needed, and build it — usually with PHP and MySQL since they're easy to host affordably. Simple, practical content-managed sites rather than anything flashy. It's where I really deepened my PHP and JavaScript skills, including for avcimakina.com.tr and eayk.org.",
+        "description": "A run of freelance work, usually with PHP and MySQL since they're easy to host affordably. Simple, practical content-managed sites rather than anything flashy. It's where I really deepened my PHP and JavaScript skills, including for \"avcimakina.com.tr\" and \"eayk.org\".",
         "period": { "display": "2020 - 2021" },
         "techs": ["PHP", "MySQL", "JavaScript", "HTML & CSS"]
       },
@@ -155,15 +174,5 @@
       "AI-assisted development (Claude, ChatGPT, agentic workflows)",
       "Local LLM deployment (Qwen, DeepSeek)"
     ]
-  },
-  "contact": {
-    "heading": "Contact",
-    "description": "I'm always up for a conversation about automation, infrastructure, or DevOps in general — feel free to reach out.",
-    "email": "hello@devrimcaner.com",
-    "cta": "Email me"
-  },
-  "footer": {
-    "text": "© 2026 Devrim ÖKDEM. Built with Next.js and MUI Joy.",
-    "builtWith": "Built with Next.js"
   }
 }
