@@ -5,18 +5,17 @@ import About from '../components/About';
 import Experience from '../components/Experience';
 import Navigation from '../components/Navigation';
 import Projects from '../components/Projects';
+import Certificates from '../components/Certificates';
 import LocaleSwitcher from '../components/LocaleSwitcher';
 import { ModeToggle } from '../components/ThemeSwitcherLayout';
 import type { LocaleCode, PortfolioData } from '../lib/portfolio';
 import enData from '../data/en.json';
 import trData from '../data/tr.json';
-import deData from '../data/de.json';
 import { site } from '../lib/site';
 
 const localeModules = {
   en: enData as PortfolioData,
   tr: trData as PortfolioData,
-  de: deData as PortfolioData,
 } as const;
 
 const STORAGE_KEY = 'portfolio-language';
@@ -27,7 +26,7 @@ const getStoredLocale = (): LocaleCode => {
   }
 
   const stored = window.localStorage.getItem(STORAGE_KEY);
-  return stored === 'en' || stored === 'tr' || stored === 'de' ? (stored as LocaleCode) : 'en';
+  return stored === 'en' || stored === 'tr' ? (stored as LocaleCode) : 'en';
 };
 
 export default function Home() {
@@ -104,8 +103,16 @@ export default function Home() {
         <Box sx={{ flex: 1 }}>
           <About data={data.about} />
           <Experience heading={data.experience.heading} experience={data.experience.items} />
+          {data.certificates && (
+            <Certificates
+              certificates={data.certificates.items}
+              completedLabel={data.certificates.completedLabel}
+              heading={data.certificates.heading}
+              verifiedLabel={data.certificates.verifiedLabel}
+            />
+          )}
           <Projects heading={data.projects.heading} projects={data.projects.items} />
-          {/*          
+          {/*
             <Box component="section" id="contact" sx={{ mb: 8 }}>
               <Typography id="contact-heading" level="h2" sx={{ mb: 1 }}>
                 {data.contact.heading}

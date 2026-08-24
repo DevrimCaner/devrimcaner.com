@@ -84,12 +84,12 @@ const theme = extendTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           position: 'relative',
-          color: theme.palette.primary.plainColor, // uses per-scheme plainColor
+          color: theme.vars.palette.primary.plainColor, // CSS var: reacts to data-joy-color-scheme
           textDecoration: 'none',
           fontWeight: 500,
           '&:hover': {
             textDecoration: 'underline',
-            textDecorationColor: theme.palette.primary.solidBg, // hover uses primary solidBg
+            textDecorationColor: theme.vars.palette.primary.solidBg, // CSS var: reacts to data-joy-color-scheme
           },
         }),
       },
@@ -106,8 +106,8 @@ const theme = extendTheme({
             borderRadius: 6,
             fontWeight: 500,
             ...(isSoft && {
-              backgroundColor: theme.palette.neutral.softBg,
-              color: theme.palette.neutral.softColor,
+              backgroundColor: theme.vars.palette.neutral.softBg, // CSS var: reacts to data-joy-color-scheme
+              color: theme.vars.palette.neutral.softColor, // CSS var: reacts to data-joy-color-scheme
             }),
           };
         },

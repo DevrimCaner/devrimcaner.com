@@ -57,7 +57,7 @@ const Navigation = ({ data }: Props) => (
 
     <Box aria-label="Profile sections" component="nav">
       <Stack spacing={1}>
-        {['about', 'experience', 'projects'].map((id) => (
+        {['about', 'experience', 'certificates', 'projects'].map((id) => (
           <Link
             key={id}
             color="primary"

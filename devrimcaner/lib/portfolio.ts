@@ -1,4 +1,4 @@
-export type LocaleCode = 'en' | 'tr' | 'de';
+export type LocaleCode = 'en' | 'tr';
 
 export type SocialLinks = {
   github?: string;
@@ -26,7 +26,7 @@ export type AboutData = {
 export type Project = {
   id: string;
   name: string;
-  description: string;
+  description: string | string[];
   url?: string;
   period: {
     display: string;
@@ -39,9 +39,15 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
-  description: string[];
+  description: string | string[];
   url?: string;
   techs: string[];
+};
+
+export type Certificate = {
+  title: string;
+  badge: string;
+  verified: boolean;
 };
 
 export type PortfolioData = {
@@ -60,14 +66,10 @@ export type PortfolioData = {
     heading: string;
     items: Project[];
   };
-  contact: {
+  certificates?: {
     heading: string;
-    description: string;
-    email: string;
-    cta: string;
-  };
-  footer?: {
-    text: string;
-    builtWith: string;
+    verifiedLabel: string;
+    completedLabel: string;
+    items: Certificate[];
   };
 };

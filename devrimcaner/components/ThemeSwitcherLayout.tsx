@@ -1,41 +1,33 @@
 import { Box, CssVarsProvider, Switch, useColorScheme } from '@mui/joy';
 import { IconMoon, IconSun } from '@tabler/icons-react';
-import { useEffect, type ReactNode } from 'react';
+import { useSyncExternalStore, type ReactNode } from 'react';
 import theme from '../theme/theme';
 
 const STORAGE_KEY = 'portfolio-theme';
 
+// No-op subscription: we only care about the one-time difference between the
+// server snapshot (always `false`) and the client snapshot (always `true`),
+// which forces React to re-render with the real value right after hydration
+// — without synchronously calling setState inside an effect.
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
 export const ModeToggle = () => {
   const { mode, setMode } = useColorScheme();
-  const resolvedMode = mode ?? 'dark';
-
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return;
-    }
-
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored === 'light' || stored === 'dark') {
-      setMode(stored);
-      return;
-    }
-
-    setMode('dark');
-  }, [setMode]);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return;
-    }
-
-    window.localStorage.setItem(STORAGE_KEY, mode ?? 'dark');
-  }, [mode]);
+  // `mode` is undefined until CssVarsProvider mounts and reads localStorage on
+  // the client, and the server always renders with `defaultMode`. Rendering
+  // a *guessed* checked/unchecked state in that gap is what caused the stuck
+  // "Mui-checked" hydration mismatch — instead we render an inert, markup-
+  // identical placeholder until we're mounted, then swap to the real control
+  // once `mode` is guaranteed to reflect the actual stored scheme.
+  const mounted = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMode(event.target.checked ? 'dark' : 'light');
   };
 
-  const isDark = resolvedMode === 'dark';
+  const isDark = mode === 'dark';
 
   return (
     <Box
@@ -52,42 +44,64 @@ export const ModeToggle = () => {
       <Box component="span" sx={{ display: 'flex', alignItems: 'center', color: 'text.secondary' }}>
         <IconSun size={14} aria-hidden="true" />
       </Box>
-      <Switch
-        checked={isDark}
-        color="success"
-        onChange={handleChange}
-        size="sm"
-        slotProps={{
-          input: {
-            'aria-label': isDark ? 'Switch to light mode' : 'Switch to dark mode',
-          },
-        }}
-        sx={{
-          '--Switch-trackWidth': '36px',
-          '--Switch-trackHeight': '20px',
-          '--Switch-thumbSize': '14px',
-          '& .JoySwitch-track': {
+      {mounted ? (
+        <Switch
+          checked={isDark}
+          color="success"
+          onChange={handleChange}
+          size="sm"
+          slotProps={{
+            input: {
+              'aria-label': isDark ? 'Switch to light mode' : 'Switch to dark mode',
+            },
+          }}
+          sx={{
+            '--Switch-trackWidth': '36px',
+            '--Switch-trackHeight': '20px',
+            '--Switch-thumbSize': '14px',
+            // Joy's Switch utility classes are `MuiSwitch-*` (generateUtilityClasses),
+            // not `JoySwitch-*` — the old selectors here never matched, so the
+            // track/thumb silently fell back to the default `color="success"`
+            // solid green in every scheme, unrelated to the hydration fix above.
+            '& .MuiSwitch-track': {
+              backgroundColor: 'neutral.softBg',
+              border: '1px solid',
+              borderColor: 'neutral.outlinedBorder',
+              boxShadow: 'none',
+            },
+            '& .MuiSwitch-thumb': {
+              backgroundColor: 'background.surface',
+              boxShadow: 'none',
+            },
+            '& .MuiSwitch-input:checked + .MuiSwitch-track': {
+              backgroundColor: 'primary.solidBg',
+              borderColor: 'primary.outlinedBorder',
+            },
+            '& .MuiSwitch-input:focus-visible + .MuiSwitch-track': {
+              boxShadow: '0 0 0 3px rgba(0, 255, 147, 0.24)',
+            },
+            '&:hover .MuiSwitch-track': {
+              opacity: 0.95,
+            },
+          }}
+        />
+      ) : (
+        // Markup-identical, non-interactive placeholder: server and the
+        // pre-mount client render must match exactly, or the *next* render
+        // (once `mode` resolves) leaves the real Switch's DOM classes stuck
+        // on whatever the server guessed — see the audit notes in theme.ts.
+        <Box
+          aria-hidden="true"
+          sx={{
+            width: '36px',
+            height: '20px',
+            borderRadius: '999px',
             backgroundColor: 'neutral.softBg',
             border: '1px solid',
             borderColor: 'neutral.outlinedBorder',
-            boxShadow: 'none',
-          },
-          '& .JoySwitch-thumb': {
-            backgroundColor: 'background.surface',
-            boxShadow: 'none',
-          },
-          '& .JoySwitch-input:checked + .JoySwitch-track': {
-            backgroundColor: 'primary.solidBg',
-            borderColor: 'primary.outlinedBorder',
-          },
-          '& .JoySwitch-input:focus-visible + .JoySwitch-track': {
-            boxShadow: '0 0 0 3px rgba(0, 255, 147, 0.24)',
-          },
-          '&:hover .JoySwitch-track': {
-            opacity: 0.95,
-          },
-        }}
-      />
+          }}
+        />
+      )}
       <Box component="span" sx={{ display: 'flex', alignItems: 'center', color: 'text.secondary' }}>
         <IconMoon size={14} aria-hidden="true" />
       </Box>

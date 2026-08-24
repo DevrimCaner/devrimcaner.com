@@ -1,5 +1,6 @@
 import { Box, Typography, Card, Chip, Stack } from '@mui/joy';
 import { IconClock } from '@tabler/icons-react';
+import Description from './Description';
 import ExternalLink from './ExternalLink';
 import type { Project } from '../lib/portfolio';
 
@@ -36,9 +37,7 @@ const Projects = ({ heading, projects }: Props) => (
             </Box>
           </Box>
 
-          <Typography level="body-sm" sx={{ mt: 1 }}>
-            {project.description}
-          </Typography>
+          <Description description={project.description} />
 
           <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap' }}>
             {project.techs.map((t) => (

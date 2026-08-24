@@ -106,15 +106,22 @@ const LocaleSwitcher = ({ onLocaleChange, locale, modeToggle }: Props) => {
   return (
     <Box
       component="header"
-      sx={{
+      sx={(theme) => ({
         position: 'sticky',
         top: 0,
         zIndex: 1000,
         px: { xs: 2, md: 3 },
         py: 1,
-        backgroundColor: 'background.surface',
-        backdropFilter: 'blur(10px)',
-      }}
+        backgroundColor: 'rgba(255, 255, 255, 0.86)',
+        WebkitBackdropFilter: 'blur(12px)',
+        backdropFilter: 'blur(12px)',
+        backgroundClip: 'padding-box',
+        [theme.getColorSchemeSelector('dark')]: {
+          backgroundColor: 'rgba(17, 26, 22, 0.72)',
+          WebkitBackdropFilter: 'blur(16px)',
+          backdropFilter: 'blur(16px)',
+        },
+      })}
     >
       <Box
         sx={{

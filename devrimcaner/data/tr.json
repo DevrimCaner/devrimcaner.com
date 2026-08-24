@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Devrim ÖKDEM | DevOps Engineer",
-    "description": "Otomasyon, altyapı optimizasyonu ve operasyonel verimliliğe odaklanan DevOps Mühendisi Devrim ÖKDEM'in portföyü.",
+    "title": "Devrim ÖKDEM | DevOps Mühendisi",
+    "description": "Otomasyon, altyapı ve uçtan uca pratik araçlar geliştirmeye odaklanan DevOps Mühendisi Devrim ÖKDEM'in portfolyosu.",
     "locale": "tr_TR"
   },
   "navigation": {
     "name": "Devrim ÖKDEM",
-    "title": "DevOps Engineer",
-    "bio": "Modern ekipler için otomasyon, dayanıklı altyapılar ve pratik araçlar geliştiriyorum.",
+    "title": "DevOps Mühendisi",
+    "bio": "Modern ekipler için otomasyon, dayanıklı altyapı ve pratik araçlar geliştiriyorum.",
     "social": {
       "linkedin": "https://www.linkedin.com/in/devrimcaner/",
       "github": "https://github.com/DevrimCaner/"
@@ -21,7 +21,7 @@
   },
   "about": {
     "heading": "Hakkımda",
-    "content": "2 yıllık uygulamalı DevOps deneyimine ve 6 yılı aşkın BT ve sistem yönetimi tecrübesine sahip bir DevOps Mühendisiyim. Linux, Windows Server, Bash betikleme, Python, PHP-FPM, MySQL, CI/CD ve full-stack araç geliştirme konularında yetkinim. Otomasyon ve izleme çözümlerinin tasarımı, geliştirilmesi ve devreye alınması konusunda deneyim sahibiyim.\n\nŞu anda AWS sertifikaları ve profesyonel eğitimlerle bulut bilişim alanındaki uzmanlığımı geliştiriyor; otomasyon, altyapı optimizasyonu ve operasyonel verimlilik üzerine yoğunlaşıyorum. Açık kaynak projelerini incelemeye, yeni teknolojileri yakından takip etmeye ve ekip odaklı projelere bilinçli katkılar sağlamaya önem veriyorum."
+    "content": "Teknolojiyle tanışmam erken yaşlarda oldu; oyunlar ve bilgisayarlar, bunu bir kariyer olarak görmeden çok önce merakımı tetikledi. Zamanla bu merak, sistemlerin nasıl çalıştığını anlama, onları geliştirme ve teknolojiyi gerçek problemlere çözüm üretmek için kullanma tutkusuna dönüştü.\n\nBeni en çok motive eden şey, sistemlere bir bütün olarak yaklaşmak; mimarisini, otomasyon süreçlerini, güvenlik tarafını ve güvenilir şekilde çalışmasını sağlayan detayları anlamak. Bu bakış açısı, DevSecOps alanına olan ilgimin de temelini oluşturuyor: güvenliğin sonradan eklenen bir unsur değil, sistemin en başından itibaren tasarımın bir parçası olduğu çözümler geliştirmek istiyorum.\n\nŞu anda AWS, Kubernetes ve Terraform gibi teknolojiler üzerinde çalışarak cloud-native yetkinliklerimi geliştiriyorum. Kişisel projelerimden biri olan hisse senedi simülasyon platformu üzerinde çalışırken ölçeklenebilir mimariler ve modern mühendislik yaklaşımları konusunda kendimi geliştirmeye devam ediyorum.\n\nTeknoloji dışında finans ve yatırım dünyasını takip ediyor, oyun tasarımıyla ilgileniyor, spor yaparak kendimi geliştirmeye devam ediyor ve öğrendiklerimi zaman zaman YouTube içerikleriyle paylaşıyorum. Ayrıca Almancamı geliştirirken, yerel bir Speaking Club aracılığıyla İngilizcemi aktif tutmaya çalışıyorum.\n\nBenim için iyi mühendislik; merak etmek, sürekli öğrenmek ve karmaşık problemleri güvenilir, güvenli ve anlamlı çözümlere dönüştürebilme becerisidir."
   },
   "experience": {
     "heading": "Deneyim",
@@ -29,40 +29,30 @@
       {
         "id": "maritimetrainer-devops-engineer",
         "company": "Maritimetrainer",
-        "role": "DevOps Engineer",
-        "period": "Şub 2024 - Günümüz",
+        "role": "DevOps Mühendisi",
+        "period": "Şub 2024 - Eyl 2026",
         "url": "https://maritimetrainer.com/",
         "description": [
-          "Birden fazla sunucu üzerinde çevrim içi ve çevrim dışı sistemlerin güncellemelerini, kurulumlarını ve operasyonel desteğini yönetiyorum.",
-          "Bash ve Python kullanarak tekrarlayan sunucu görevlerini ve izleme süreçlerini otomatikleştirerek operasyonel verimliliği önemli ölçüde artırdım ve manuel hataları azalttım.",
-          "Linux, PHP-FPM ve MySQL konularındaki uzmanlığımı kullanarak sistem kararlılığını sağlıyor ve performansı optimize ediyorum.",
-          "Otomatik sunucu yedekleme, uzaktan komut çalıştırma ve sunucu metriklerinin gerçek zamanlı izlenmesini sağlayan full-stack bir araç olan DevOps Lab'i tasarlayıp geliştirdim."
+          "Dağıtık bir sunucu altyapısındaki güncelleme, bakım ve operasyonel destek süreçlerini yönettim — buna hem sürekli çevrimiçi çalışan sistemler hem de bağlantı sürekliliği her zaman öngörülemeyen gemi üzerindeki sunucular dahildi.",
+          "Karşılaşılan tekrarlayan sorunlardan biri, standart yedekleme otomasyonunun beklenmedik şekilde çevrimdışı kalabilen sunucular için yeterli olmaması ve bunun eğitim verilerini riske atmasıydı. Bu sorunu çözmek için DevOps Lab'i geliştirdim — zamanla 400'den fazla sunucu için otomatik yedekleme ve gerçek zamanlı izleme süreçlerini yöneten tam kapsamlı bir platform haline geldi.",
+          "Bash ve Python kullanarak tekrarlayan bakım ve izleme görevlerini otomatikleştirdim; Linux, PHP-FPM ve MySQL konularındaki deneyimimi kullanarak sistemlerin kararlılığını ve performansını korumaya katkı sağladım.",
+          "Ayrıca Unreal Engine ile çalışan ekipler için Git LFS dahil olmak üzere Git süreçlerinde mühendislik ekiplerine destek oldum, kişisel bilgi bağımlılığını azaltmak amacıyla tekrar eden prosedürleri dokümante ettim, ISO 27001 denetim hazırlıklarına katkıda bulundum ve şirket genelindeki uç nokta güvenliği ile DLP çözümlerini takip ettim."
         ],
-        "techs": [
-          "Linux",
-          "Bash",
-          "Python",
-          "PHP"
-        ]
+        "techs": ["Linux", "Bash", "Python", "Django", "PostgreSQL", "Docker"]
       },
       {
         "id": "niobe-hosting-support-specialist",
         "company": "Niobe Hosting",
-        "role": "System Support Specialist",
-        "period": "2019 - 2024",
+        "role": "Sistem Destek Uzmanı",
+        "period": "Şub 2019 - Şub 2024",
         "url": "https://www.niobehosting.com/",
         "description": [
-          "Linux, Windows Server, CentOS, Plesk, cPanel, DirectAdmin, VMware, Hyper-V, PHP, ASP.NET ve WordPress ortamları için kapsamlı teknik destek sağladım.",
-          "Reseller hosting kullanıcılarının e-posta kullanımını takip etmek için SizeChecker adlı full-stack çözümü bağımsız olarak tasarlayıp geliştirdim ve devreye aldım. Windows Servisi C# ile, web arayüzü ise PHP, JavaScript ve MySQL kullanılarak geliştirildi. Böylece daha önce takip edilemeyen metriklerin doğru şekilde izlenmesi ve raporlanması mümkün hale geldi.",
-          "Yoğun teknik destek taleplerini yönetirken problem çözme, iletişim ve sunucu yönetimi becerilerimi geliştirdim."
+          "Beş yıl boyunca, hızlı tempolu, vardiyalı bir rolde Linux, Windows Server, CentOS, Plesk, cPanel, DirectAdmin, VMware, Hyper-V, PHP, ASP.NET ve WordPress ortamlarında teknik destek sağladım.",
+          "Şirketin eski mail kullanım takip aracı bir altyapı değişikliğinden sonra bozulmuş ve 2-3 yıl boyunca çalışmaz halde kalmıştı. Düzeltmesi mümkün olmamıştı, bu yüzden sıfırdan bir alternatif geliştirdim — SizeChecker; bir C# Windows Service ile PHP/JavaScript/MySQL tabanlı bir arayüzü bir araya getiren bu araç, reseller mail kullanımını ilk kez tekrar ölçülebilir hale getirdi.",
+          "Bu proje sadece teknik bir açığı kapatmakla kalmadı: ortaya çıkardığı gerçek kullanım verileri, şirketin yeni bir 1TB paket katmanı sunmasına yol açtı ve 20'den fazla reseller planını yükseltti.",
+          "Gün be gün yoğun sayıda destek talebiyle uğraşmak, problem çözme, iletişim ve sunucu yönetimi becerilerimi geliştirdim."
         ],
-        "techs": [
-          "Linux",
-          "Windows",
-          "SQL",
-          "PHP",
-          "C#"
-        ]
+        "techs": ["Linux", "Windows Server", "C#", "PHP", "MySQL"]
       }
     ]
   },
@@ -72,89 +62,83 @@
       {
         "id": "devops-lab-maritimetrainer",
         "name": "DevOps Lab @ Maritimetrainer",
-        "description": "Çevrim dışı sunucular için geliştirilmiş full-stack otomasyon ve izleme aracı. Ön yüz JavaScript, arka uç Django/Python ve SQLite/PostgreSQL ile geliştirildi. Sunucu tarafı işlemleri Bash betikleriyle otomatikleştirildi ve kolay dağıtım için Docker ile containerize edildi.",
+        "description": [
+          "Gemi üzerindeki eğitim sunucularında genellikle güvenilir bir internet bağlantısı bulunmuyordu; bu nedenle sürekli çevrimiçi sistemlerimiz için sorunsuz çalışan standart yedekleme otomasyonu bu ortamlar için uygun değildi. Bu problemi çözmek için çalışmaya başladım.",
+          "Proje küçük bir Python scripti ile başladı: CSV dosyalarında saklanan verileri okuyup yedekleyen basit bir yapıydı (ilk adıyla sadece 'autobackup'). İhtiyaçlar arttıkça daha yönetilebilir bir yapı için SQLite ve Flask kullanımına geçtim; sonrasında ise daha temiz bir MVC mimarisi ve daha iyi I/O performansı elde etmek amacıyla sistemi Django ve PostgreSQL üzerine yeniden geliştirdim.",
+          "Basit bir yedekleme scripti olarak başlayan proje, zamanla dokunduğu her sunucudan gerçek zamanlı telemetri verileri — disk kullanımı ve bakım durumu gibi bilgiler — toplayabilen kapsamlı bir platforma dönüştü.",
+          "Platform, özel bir ağ yapısı ve YubiKey iki faktörlü kimlik doğrulama ile güvence altına alındı; 400'den fazla gemi üzerindeki sunucunun yedekleme ve izleme süreçlerini yönetir hale geldi.",
+          "Bu süreç boyunca Bash ile uzak sunucu operasyonları konusunda derinlemesine deneyim kazandım, Docker ile uygulama konteynerleştirme süreçlerinde çalıştım, farklı Python frameworkleri üzerinde geliştirme yaptım ve PostgreSQL'i üretim ortamında yönettim."
+        ],
         "url": "https://maritimetrainer.com/",
-        "period": {
-          "display": "Tem 2025"
-        },
-        "techs": [
-          "Python",
-          "Bash",
-          "SQL",
-          "JavaScript",
-          "HTML & CSS"
-        ]
+        "period": { "display": "2025" },
+        "techs": ["Python", "Django", "Flask", "PostgreSQL", "Docker", "Bash"]
+      },
+      {
+        "id": "sizechecker-niobehosting",
+        "name": "SizeChecker @ Niobe Hosting",
+        "description": [
+          "Niobe Hosting'in mail sunucuları IceWarp üzerinde çalışıyordu ve reseller mail kullanımını takip eden araç, bir altyapı değişikliğinin ardından 2-3 yıldır bozuktu — kimse yeniden çalışır hale getirememişti.",
+          "Bunu kendim düzeltmeye karar verdim: kullanım verisini doğrudan çeken bir C# Windows Service ve bunu görüntüleyen bir PHP/JavaScript/MySQL arayüzü geliştirdim.",
+          "Güvenilirlik zorlu kısımlardan biriydi, servisin bir sunucu yeniden başlatmasından sonra sorunsuz çalışmasını sağlamak gerekiyordu.",
+          "Yayına alındıktan sonra etkisi teknik düzeltmenin ötesine geçti — ortaya çıkardığı kullanım verisi bazı müşterilerin mevcut hiçbir paketin izin vermediği kadar fazla kullanım yaptığını gösterdi ve bu da şirketin yeni bir 1TB paket katmanı sunmasına yol açtı. 20'den fazla reseller planını yükseltti.",
+          "Kendi geliştirdiğin bir aracın sadece teknik bir sorunu çözmekle kalmayıp gerçek bir iş etkisi de yaratabileceğine dair güzel bir projeydi."
+        ],
+        "url": "https://www.niobehosting.com/",
+        "period": { "display": "Mar 2023" },
+        "techs": ["C#", "Windows Services", "PHP", "JavaScript", "MySQL"]
       },
       {
         "id": "backlogger50",
         "name": "BackLogger50",
-        "description": "BackLogger50, ReactJS ve PHP kullanılarak geliştirilmiş, video oyunları backlog'unu yönetmeye yönelik bir web uygulamasıdır.",
+        "description": [
+          "Harvard'ın CS50x dersi için bitirme projem. Sona kadar motivasyonumu korumak için kendi ilgi alanlarıma yakın bir şey seçmek istedim. Sahip olunan, bitirilen ve hâlâ bekleyen oyunları takip eden bir web uygulaması geliştirdim.",
+          "Modern ve talep gören bir framework'te gerçek anlamda deneyim kazanmak için Vue ya da Angular yerine bilinçli olarak ReactJS'i seçtim; bunu kolayca barındırabileceğim bir PHP backend ile eşleştirdim. Oyun verileri ise IGDB API'sinden (Twitch/Amazon) geliyor."
+        ],
         "url": "https://github.com/DevrimCaner/BackLogger50",
-        "period": {
-          "display": "Eki 2023"
-        },
-        "techs": [
-          "JavaScript",
-          "PHP",
-          "HTML & CSS",
-          "SQL"
-        ]
-      },
-      {
-        "id": "sizechecker-niobehosting",
-        "name": "SizeChecker @ Niobehosting",
-        "description": "Daha önce takip edilemeyen reseller hosting kullanıcılarının e-posta kullanımını hesaplamak için full-stack bir araç geliştirdim. Windows Servisi C# ile, web arayüzü ise PHP, JavaScript ve MySQL ile geliştirildi. Projenin tasarımı, geliştirilmesi ve yayına alınması tamamen bağımsız olarak gerçekleştirildi.",
-        "url": "https://www.niobehosting.com/",
-        "period": {
-          "display": "Mar 2023"
-        },
-        "techs": [
-          "C#",
-          "PHP",
-          "SQL",
-          "JavaScript",
-          "HTML & CSS"
-        ]
+        "period": { "display": "Eki 2023" },
+        "techs": ["ReactJS", "PHP", "MySQL", "IGDB API"]
       },
       {
         "id": "ecbus-net",
         "name": "Ecbus.net",
-        "description": "Otobüs şirketi operasyonları için konum ve motor verilerinin takibini içeren web uygulaması modülleri geliştirdim (ön yüz JavaScript/jQuery, arka uç PHP).",
-        "period": {
-          "display": "Şub 2021"
-        },
-        "techs": [
-          "PHP",
-          "JavaScript",
-          "HTML & CSS",
-          "SQL"
-        ]
+        "description": [
+          "Bir takım arkadaşımla birlikte geliştirdiğimiz bir otobüs takip ve yönetim sistemi — tipik bir CMS projesinden ziyade gerçek bir operasyonel araca daha yakındı.",
+          "İkimiz de PHP'yi iyi biliyorduk ve barındırmayı kolaylaştırdığı için onun üzerine, frontend'de de JavaScript kullanarak inşa ettik. Takım arkadaşım otobüs üzerindeki yazılımı üstlendi, ben de backend veri işleme ve harita tabanlı görüntüleme üzerinde çalıştım. Doğru konum takibi için Google Maps araçlarından yararlanılı.",
+          "En zorlu problemlerden biri kod değil geometriydi: bir otobüsün canlı konumunun bir kullanıcının harita üzerinde çizdiği bir şeklin içine düşüp düşmediğini belirlenmesi gerekiyordu. Sistem sonunda iki otobüs şirketinde, yaklaşık 70 araçta kullanıma girdi."
+        ],
+        "period": { "display": "Şub 2021" },
+        "techs": ["PHP", "JavaScript", "MySQL", "Google Maps API"]
       },
       {
         "id": "personal-professional-websites",
-        "name": "Kişisel ve Kurumsal Web Siteleri",
-        "description": "HTML, CSS, JavaScript ve PHP kullanarak kişisel ve kurumsal web siteleri geliştirdim (ör. avcimakina.com.tr, eayk.org).",
-        "period": {
-          "display": "2020 - 2021"
-        },
-        "techs": [
-          "HTML & CSS",
-          "PHP",
-          "JavaScript",
-          "SQL"
-        ]
+        "name": "Kişisel & Profesyonel Web Siteleri",
+        "description": "Genellikle PHP ve MySQL kullanarak, uygun fiyatlı ve kolay barındırılabilen platformlarda freelance işler yürüttüm. Gösterişli siteler yerine, basit ve pratik içerik yönetimli siteler tasarladım. Bunlara, \"avcimakina.com.tr\" ve \"eayk.org\" gibi siteler de dahildi, PHP ve JavaScript becerilerimi bu projelerle bir üst noktaya taşıdım.",
+        "period": { "display": "2020 - 2021" },
+        "techs": ["PHP", "MySQL", "JavaScript", "HTML & CSS"]
       },
       {
         "id": "edge-of-coin",
         "name": "Edge of Coin",
-        "description": "Unity 3D ve C# kullanılarak geliştirilen hyper casual mobil oyun.",
-        "period": {
-          "display": "Eki 2017"
-        },
-        "techs": [
-          "Unity",
-          "C#"
-        ]
+        "description": "İlk tam anlamıyla yayımlanan uygulamam — ona hâlâ ayrı bir yerim var. O dönem eğlenceli ve biraz farklı bulduğum basit bir oyun fikrinden doğdu, mobil uyumluluk için Unity ile geliştirildi. Android 2017'den bu yana çok değişti ve artık pek oynanabilir değil, ama gerçek bir ürünü inşa etmek, bir mağazaya yayımlamak ve versiyonlamak bana o zamandan beri işime yarayan çok şey öğretti.",
+        "period": { "display": "Eki 2017" },
+        "techs": ["Unity", "C#"]
+      }
+    ]
+  },
+  "certificates": {
+    "heading": "Sertifikalar",
+    "verifiedLabel": "Doğrulanmış",
+    "completedLabel": "Tamamlandı",
+    "items": [
+      {
+        "title": "Harvard CS50x",
+        "badge": "/certificates/harvard.png",
+        "verified": true
+      },
+      {
+        "title": "AWS Cloud Practitioner",
+        "badge": "/certificates/Cloud-Practioner.png",
+        "verified": false
       }
     ]
   },
@@ -162,25 +146,33 @@
     "heading": "Yetenekler",
     "items": [
       "Linux",
+      "Windows Server",
       "Bash",
       "Python",
-      "PHP-FPM",
+      "C#",
+      "PHP",
+      "JavaScript",
+      "ReactJS",
+      "Next.js",
+      "Flask",
+      "Django",
+      "FastAPI",
+      "PostgreSQL",
       "MySQL",
-      "CI/CD",
+      "SQLite",
+      "NoSQL (Firebase)",
       "Docker",
-      "AWS",
-      "Otomasyon",
-      "İzleme"
+      "Git",
+      "GitHub Actions",
+      "CI/CD",
+      "Oracle Cloud Infrastructure (OCI)",
+      "AWS (kişisel projeler)",
+      "Kubernetes (kişisel projeler)",
+      "Terraform (kişisel projeler)",
+      "ISO 27001 dokümantasyon incelemesi",
+      "Ağ Sorun Giderme",
+      "Yapay zeka destekli geliştirme (Claude, ChatGPT, agentic iş akışları)",
+      "Yerel LLM dağıtımı (Qwen, DeepSeek)"
     ]
-  },
-  "contact": {
-    "heading": "İletişim",
-    "description": "Otomasyon, altyapı ve sürdürülebilir yazılım teslim süreçleri hakkında konuşmaya her zaman açığım.",
-    "email": "hello@devrimcaner.com",
-    "cta": "E-posta Gönder"
-  },
-  "footer": {
-    "text": "© 2026 Devrim ÖKDEM. Next.js ve MUI Joy ile geliştirildi.",
-    "builtWith": "Next.js ile geliştirildi"
   }
 }
